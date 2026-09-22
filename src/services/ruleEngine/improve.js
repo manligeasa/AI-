@@ -1,5 +1,5 @@
 import { STATUS } from '../criteria.js'
-import { detectDomain } from './domains.js'
+import { detectDomain, SENSITIVE_TOPIC } from './domains.js'
 
 /** 부족한 항목에 넣을 기본값. 여기만 바꾸면 개선 질문 전체에 반영된다. */
 export const DEFAULTS = {
@@ -15,6 +15,7 @@ const REASONS = {
   purpose: 'AI가 해야 할 일을 분명히 적었어요.',
   format: '답의 모양을 정해 한눈에 보기 쉽게 했어요.',
   tone: '말투를 정해 읽기 편한 글이 나오게 했어요.',
+  sensitive: '민감한 주제라서 사실 확인과 존중하는 표현을 요청했어요.',
 }
 
 const hasBatchim = (word) => {
@@ -81,6 +82,13 @@ export function improve(question, evaluation) {
     segments.push({ text: lastLine, added: true })
     if (format) reasons.push(REASONS.format)
     if (tone) reasons.push(REASONS.tone)
+  }
+
+  // 4. 정치·종교 등 민감한 주제는 사실 확인과 존중하는 표현을 요청한다
+  if (SENSITIVE_TOPIC.test(question)) {
+    segments.push({ text: '\n', added: false })
+    segments.push({ text: '사실에 근거하고, 생각이 다른 사람도 존중하는 표현으로 써줘.', added: true })
+    reasons.push(REASONS.sensitive)
   }
 
   return {

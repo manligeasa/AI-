@@ -99,6 +99,16 @@ describe('improve', () => {
     expect(imp.segments.find((s) => !s.added && s.text.trim()).text).toBe('건강')
   })
 
+  it('칼럼·홍보문은 분야에 맞는 역할을 붙인다', () => {
+    expect(run('칼럼 써줘').text).toMatch(/^신문 칼럼니스트의 입장에서/)
+    expect(run('태안 파크골프 대회 홍보문 만들어줘').text).toMatch(/^지역 행사 홍보 전문가의 입장에서/)
+  })
+
+  it('정치 등 민감한 주제는 사실 확인·존중 표현을 요청한다', () => {
+    expect(run('정치 댓글 써줘').text).toMatch(/존중하는 표현으로 써줘\.$/)
+    expect(run('강의안 만들어줘').text).not.toContain('존중')
+  })
+
   it('상황이 없으면 조언으로 안내한다', () => {
     expect(run('블로그 글 써줘').tip).toContain('내 상황')
   })
