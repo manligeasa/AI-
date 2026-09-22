@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+
+/* 50~70대 사용자를 위해 기본 글자 크기를 18px로 올린다 */
+html {
+  font-size: 18px;
+}
+
+body {
+  @apply bg-amber-50 text-stone-800 antialiased;
+  word-break: keep-all;
+}
