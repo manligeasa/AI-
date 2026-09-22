@@ -3,6 +3,7 @@ import { evaluate } from './evaluate.js'
 import { improve } from './improve.js'
 import { analyzeByKeywords } from './keywordAnalyzer.js'
 import { getLevel } from '../criteria.js'
+import { EXAMPLE_QUESTIONS } from '../../data/exampleQuestions.js'
 
 const statusOf = (evaluation) =>
   Object.fromEntries(evaluation.criteria.map((c) => [c.id, c.status]))
@@ -100,5 +101,16 @@ describe('improve', () => {
 
   it('상황이 없으면 조언으로 안내한다', () => {
     expect(run('블로그 글 써줘').tip).toContain('내 상황')
+  })
+})
+
+describe('예시 질문', () => {
+  it('6개 모두 목적은 충족하고, 보완할 점이 남아 있다', () => {
+    expect(EXAMPLE_QUESTIONS).toHaveLength(6)
+    for (const { question } of EXAMPLE_QUESTIONS) {
+      const r = analyzeByKeywords(question)
+      expect(r.met).toContain('목적')
+      expect(r.missing.length).toBeGreaterThan(0)
+    }
   })
 })

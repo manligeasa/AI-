@@ -20,6 +20,7 @@ npm run build    # 배포용 파일 만들기 (dist 폴더)
 src/
 ├─ App.jsx                      화면 흐름(1 입력 → 2 평가 → 3 개선 질문)
 ├─ components/                  화면 조각(점수 카드, 피드백 카드, 버튼 등)
+├─ data/exampleQuestions.js     입력창 아래 예시 질문 버튼 6개
 └─ services/
    ├─ coachService.js           화면이 부르는 유일한 창구 — analyzeQuestion(question)
    ├─ criteria.js               평가 기준 6가지와 안내 문구 (공통)

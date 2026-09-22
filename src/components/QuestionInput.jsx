@@ -1,6 +1,5 @@
 import Button from './Button.jsx'
-
-const EXAMPLES = ['블로그 글 써줘', '강의 자료 만들어줘', '건강에 좋은 운동 알려줘']
+import { EXAMPLE_QUESTIONS } from '../data/exampleQuestions.js'
 
 export default function QuestionInput({ value, onChange, onSubmit, loading, error, canSubmit }) {
   return (
@@ -21,18 +20,27 @@ export default function QuestionInput({ value, onChange, onSubmit, loading, erro
       />
 
       <div className="space-y-3">
-        <p className="font-semibold text-stone-600">이런 질문으로 연습해 볼 수도 있어요</p>
-        <div className="flex flex-wrap gap-3">
-          {EXAMPLES.map((ex) => (
-            <button
-              key={ex}
-              type="button"
-              onClick={() => onChange(ex)}
-              className="min-h-12 rounded-full border-2 border-orange-200 bg-white px-5 text-lg text-orange-900 hover:bg-orange-50"
-            >
-              {ex}
-            </button>
-          ))}
+        <p className="font-semibold text-stone-600">예시 질문을 눌러 바로 연습해 보세요</p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {EXAMPLE_QUESTIONS.map((ex) => {
+            const selected = value === ex.question
+            return (
+              <button
+                key={ex.label}
+                type="button"
+                onClick={() => onChange(ex.question)}
+                aria-pressed={selected}
+                className={`flex min-h-20 flex-col items-center justify-center gap-1 rounded-2xl border-2 px-3 py-3 text-center text-lg font-semibold leading-snug transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-orange-300 ${
+                  selected
+                    ? 'border-orange-500 bg-orange-100 text-orange-900'
+                    : 'border-orange-200 bg-white text-stone-800 hover:bg-orange-50'
+                }`}
+              >
+                <span className="text-2xl" aria-hidden>{ex.icon}</span>
+                {ex.label}
+              </button>
+            )
+          })}
         </div>
       </div>
 
