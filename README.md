@@ -19,7 +19,7 @@ npm run build    # 배포용 파일 만들기 (dist 폴더)
 ```
 src/
 ├─ App.jsx                      화면 흐름(1 입력 → 2 평가 → 3 개선 질문)
-├─ components/                  화면 조각(버튼, 카드, 별점 등)
+├─ components/                  화면 조각(점수 카드, 피드백 카드, 버튼 등)
 └─ services/
    ├─ coachService.js           화면이 부르는 유일한 창구 — analyzeQuestion(question)
    ├─ criteria.js               평가 기준 6가지와 안내 문구 (공통)
@@ -27,8 +27,8 @@ src/
    │  ├─ ruleBasedProvider.js   규칙 기반 분석 (현재 사용)
    │  └─ openaiProvider.js      OpenAI 분석 자리 (추후 연결)
    └─ ruleEngine/
-      ├─ keywordAnalyzer.js     키워드 목록 + analyzeByKeywords(점수·충족·부족·조언)
-      ├─ evaluate.js            키워드 분석 결과를 별점·총평·기준 카드로 변환
+      ├─ keywordAnalyzer.js     키워드 목록 + analyzeByKeywords(점수·수준·좋은 점·보완할 점·개선 방향)
+      ├─ evaluate.js            키워드 분석 결과를 화면용 평가 결과로 변환
       ├─ improve.js             빠진 기준을 채운 개선 질문 만들기
       └─ domains.js             분야별(SNS·강의·업무·일상) 추천 문구
 ```

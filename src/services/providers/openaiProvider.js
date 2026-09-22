@@ -11,11 +11,14 @@
 /** 서버와 주고받을 결과 모양 — 규칙 기반 결과와 같다. */
 export const ANALYSIS_SCHEMA = {
   evaluation: {
-    stars: '1~5 정수',
-    summary: '잘한 점 → 보완할 점 순서의 한 줄 총평',
+    score: '0~100 정수',
+    level: '기초 | 보통 | 좋음 | 매우 좋음 (생략하면 점수로 자동 계산)',
     criteria: [
-      { id: 'purpose | situation | audience | role | format | tone', status: 'good | partial | missing', message: '한 문장 설명' },
+      { id: 'purpose | situation | audience | role | format | tone', status: 'good | partial | missing' },
     ],
+    strengths: ['좋은 점 (생략하면 기준 상태로 자동 작성)'],
+    weaknesses: ['보완할 점 (생략 가능)'],
+    directions: ['개선 방향 (생략 가능)'],
   },
   improvement: {
     segments: [{ text: '문장 조각', added: 'true면 새로 더한 부분' }],

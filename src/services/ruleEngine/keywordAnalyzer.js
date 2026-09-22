@@ -1,4 +1,4 @@
-import { CRITERIA } from '../criteria.js'
+import { CRITERIA, getLevel } from '../criteria.js'
 
 /**
  * 평가 항목별 키워드 목록.
@@ -57,10 +57,13 @@ function findKeywords(text, { keywords, exclude = [] }) {
  *
  * @param {string} question 사용자가 입력한 질문
  * @returns {{
- *   score: number,       // 0~100점 (충족 항목 수 ÷ 6 × 100)
- *   met: string[],       // 충족 항목 이름 예) ['목적', '형식']
- *   missing: string[],   // 부족 항목 이름 예) ['대상', '말투']
- *   advice: string[],    // 부족 항목별 개선 조언
+ *   score: number,         // 0~100점 (충족 항목 수 ÷ 6 × 100)
+ *   level: string,         // 기초 | 보통 | 좋음 | 매우 좋음
+ *   met: string[],         // 충족 항목 이름 예) ['목적', '형식']
+ *   missing: string[],     // 부족 항목 이름 예) ['대상', '말투']
+ *   strengths: string[],   // 좋은 점
+ *   weaknesses: string[],  // 보완할 점
+ *   directions: string[],  // 개선 방향 (예시 포함)
  *   details: { id: string, label: string, met: boolean, matched: string[] }[]
  * }}
  */
@@ -72,17 +75,18 @@ export function analyzeByKeywords(question) {
     return { id: c.id, label: c.label, met: matched.length > 0, matched }
   })
 
-  const met = details.filter((d) => d.met)
-  const missing = details.filter((d) => !d.met)
+  const metCriteria = CRITERIA.filter((c, i) => details[i].met)
+  const missingCriteria = CRITERIA.filter((c, i) => !details[i].met)
+  const score = Math.round((metCriteria.length / CRITERIA.length) * 100)
 
   return {
-    score: Math.round((met.length / details.length) * 100),
-    met: met.map((d) => d.label),
-    missing: missing.map((d) => d.label),
-    advice: missing.map((d) => {
-      const { messages } = CRITERIA.find((c) => c.id === d.id)
-      return `${d.label}: ${messages.missing} 예) ${KEYWORDS[d.id].example}`
-    }),
+    score,
+    level: getLevel(score),
+    met: metCriteria.map((c) => c.label),
+    missing: missingCriteria.map((c) => c.label),
+    strengths: metCriteria.map((c) => c.strength),
+    weaknesses: missingCriteria.map((c) => c.weakness),
+    directions: missingCriteria.map((c) => `${c.direction} 예) ${KEYWORDS[c.id].example}`),
     details,
   }
 }

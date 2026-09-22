@@ -1,22 +1,33 @@
 import Button from './Button.jsx'
-import StarRating from './StarRating.jsx'
-import CriterionCard from './CriterionCard.jsx'
+import ScoreCard from './ScoreCard.jsx'
+import FeedbackCard from './FeedbackCard.jsx'
 
 export default function EvaluationResult({ question, evaluation, onNext, onBack }) {
   return (
-    <section className="space-y-6">
-      <div className="space-y-3 rounded-3xl bg-white p-6 text-center shadow-sm">
-        <p className="text-stone-500">내 질문</p>
-        <p className="text-xl font-semibold">“{question}”</p>
-        <StarRating stars={evaluation.stars} />
-        <p className="text-xl font-bold leading-relaxed text-orange-900">{evaluation.summary}</p>
-      </div>
+    <section className="space-y-5">
+      <ScoreCard question={question} evaluation={evaluation} />
 
-      <ul className="grid gap-4 sm:grid-cols-2">
-        {evaluation.criteria.map((c, i) => (
-          <CriterionCard key={c.id} criterion={c} index={i} />
-        ))}
-      </ul>
+      <FeedbackCard
+        tone="good"
+        icon="👍"
+        title="좋은 점"
+        items={evaluation.strengths}
+        emptyText="아직 없어요. 아래 개선 방향을 하나씩 더해 보세요."
+      />
+      <FeedbackCard
+        tone="warn"
+        icon="✏️"
+        title="보완할 점"
+        items={evaluation.weaknesses}
+        emptyText="보완할 점이 없습니다. 훌륭한 질문이에요!"
+      />
+      <FeedbackCard
+        tone="guide"
+        icon="🧭"
+        title="개선 방향"
+        items={evaluation.directions}
+        emptyText="지금 그대로 사용해도 좋습니다."
+      />
 
       <div className="flex flex-col gap-3 sm:flex-row-reverse">
         <Button onClick={onNext} className="flex-1">더 좋은 질문 보기</Button>

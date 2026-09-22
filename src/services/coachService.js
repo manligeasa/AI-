@@ -1,4 +1,4 @@
-import { CRITERIA } from './criteria.js'
+import { CRITERIA, STATUS, getLevel } from './criteria.js'
 import { ruleBasedProvider } from './providers/ruleBasedProvider.js'
 import { openaiProvider } from './providers/openaiProvider.js'
 
@@ -24,21 +24,27 @@ export async function analyzeQuestion(question) {
   return withCriteriaInfo(result)
 }
 
-/** 제공자가 빠뜨린 기준 이름·안내 문구를 공통 목록으로 채운다. */
+/** 제공자가 빠뜨린 값(기준 이름, 수준, 좋은 점 등)을 공통 규칙으로 채운다. */
 function withCriteriaInfo(result) {
+  const { evaluation } = result
   const criteria = CRITERIA.map((c) => {
-    const found = result.evaluation.criteria.find((r) => r.id === c.id) ?? { status: 'missing' }
-    return {
-      ...found,
-      id: c.id,
-      label: c.label,
-      question: c.question,
-      message: found.message ?? c.messages[found.status],
-    }
+    const found = evaluation.criteria.find((r) => r.id === c.id)
+    return { id: c.id, label: c.label, status: found?.status ?? STATUS.MISSING }
   })
+  const good = CRITERIA.filter((c, i) => criteria[i].status === STATUS.GOOD)
+  const lacking = CRITERIA.filter((c, i) => criteria[i].status !== STATUS.GOOD)
+  const score = evaluation.score ?? Math.round((good.length / CRITERIA.length) * 100)
+
   const segments = result.improvement.segments
   return {
-    evaluation: { ...result.evaluation, criteria },
+    evaluation: {
+      score,
+      level: evaluation.level ?? getLevel(score),
+      criteria,
+      strengths: evaluation.strengths ?? good.map((c) => c.strength),
+      weaknesses: evaluation.weaknesses ?? lacking.map((c) => c.weakness),
+      directions: evaluation.directions ?? lacking.map((c) => c.direction),
+    },
     improvement: {
       ...result.improvement,
       text: result.improvement.text ?? segments.map((s) => s.text).join(' '),
