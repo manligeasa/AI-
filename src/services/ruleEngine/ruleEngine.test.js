@@ -70,18 +70,35 @@ describe('getLevel', () => {
 })
 
 describe('improve', () => {
-  it('빠진 기준만 덧붙이고 원래 질문은 그대로 둔다', () => {
-    const q = '강의 자료 만들어줘'
-    const imp = improve(q, evaluate(q))
-    expect(imp.segments.find((s) => !s.added).text).toBe(`${q}.`)
-    expect(imp.text).toContain('교육 전문 강사')
-    expect(imp.text).toContain('[대상: 예)')
-    expect(imp.reasons).toHaveLength(5)
+  const run = (q) => improve(q, evaluate(q))
+
+  it('부족한 대상·형식·말투를 기본값으로 채운다', () => {
+    expect(run('강의 자료 만들어줘').text).toBe(
+      '경험 많은 교육 전문 강사의 입장에서,\n'
+      + 'AI 초보자를 대상으로,\n'
+      + '강의 자료 만들어줘.\n'
+      + '목록 형식으로 정리하고, 친근하고 전문적인 문체로 작성해줘.',
+    )
   })
 
-  it('목적이 없으면 원하는 일 빈칸을 원래 질문 뒤에 붙인다', () => {
-    const imp = improve('건강', evaluate('건강'))
-    const i = imp.segments.findIndex((s) => !s.added)
-    expect(imp.segments[i + 1].text).toContain('[원하는 일')
+  it('충족한 항목은 덧붙이지 않는다', () => {
+    const imp = run('마케팅 전문가처럼 50대 독자를 위한 칼럼을 따뜻하게 작성해줘')
+    expect(imp.text).toBe('마케팅 전문가처럼 50대 독자를 위한 칼럼을 따뜻하게 작성해줘.')
+    expect(imp.reasons).toEqual([])
+  })
+
+  it('형식만 부족하면 형식 줄만 붙인다', () => {
+    const imp = run('전문가처럼 초보자에게 친근하게 알려줘')
+    expect(imp.text.split('\n').at(-1)).toBe('목록 형식으로 정리해줘.')
+  })
+
+  it('목적이 없으면 "~에 대해 설명해줘"를 붙이고 원래 질문은 그대로 둔다', () => {
+    const imp = run('건강')
+    expect(imp.text).toContain('건강에 대해 설명해줘.')
+    expect(imp.segments.find((s) => !s.added && s.text.trim()).text).toBe('건강')
+  })
+
+  it('상황이 없으면 조언으로 안내한다', () => {
+    expect(run('블로그 글 써줘').tip).toContain('내 상황')
   })
 })

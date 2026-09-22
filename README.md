@@ -29,8 +29,8 @@ src/
    └─ ruleEngine/
       ├─ keywordAnalyzer.js     키워드 목록 + analyzeByKeywords(점수·수준·좋은 점·보완할 점·개선 방향)
       ├─ evaluate.js            키워드 분석 결과를 화면용 평가 결과로 변환
-      ├─ improve.js             빠진 기준을 채운 개선 질문 만들기
-      └─ domains.js             분야별(SNS·강의·업무·일상) 추천 문구
+      ├─ improve.js             부족한 항목을 기본값(DEFAULTS)으로 채운 개선 질문 만들기
+      └─ domains.js             분야별(SNS·강의·업무·일상) AI 역할
 ```
 
 화면(components)은 `coachService`만 알고, 분석 방식은 `providers`에서 갈아 끼운다.

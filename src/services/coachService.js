@@ -47,8 +47,7 @@ function withCriteriaInfo(result) {
     },
     improvement: {
       ...result.improvement,
-      text: result.improvement.text ?? segments.map((s) => s.text).join(' '),
-      hasBlanks: segments.some((s) => s.added && s.text.includes('[')),
+      text: result.improvement.text ?? segments.map((s) => s.text).join(''),
     },
   }
 }

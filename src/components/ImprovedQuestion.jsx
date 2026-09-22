@@ -33,19 +33,17 @@ export default function ImprovedQuestion({ question, improvement, onBack, onRest
       </div>
 
       <div className="space-y-2">
-        <p className="font-semibold text-orange-800">더 좋아진 질문</p>
-        <p className="rounded-2xl border-2 border-orange-300 bg-white p-5 text-xl leading-loose">
-          {improvement.segments.map((s, i) => (
-            <span key={i}>
-              {i > 0 && ' '}
-              {s.added ? <mark className="rounded bg-yellow-200 px-1 text-stone-900">{s.text}</mark> : s.text}
-            </span>
-          ))}
+        <p className="font-semibold text-orange-800">개선된 질문</p>
+        <p className="whitespace-pre-line rounded-2xl border-2 border-orange-300 bg-white p-5 text-xl leading-loose">
+          {improvement.segments.map((s, i) =>
+            s.added ? <mark key={i} className="rounded bg-yellow-200 px-0.5 text-stone-900">{s.text}</mark> : <span key={i}>{s.text}</span>,
+          )}
         </p>
-        <p className="text-base text-stone-600">
-          <mark className="rounded bg-yellow-200 px-1">노란색</mark> 부분이 새로 더해진 부분이에요.
-          {improvement.hasBlanks && ' [ ] 안은 내 상황에 맞게 바꿔 적어 주세요.'}
-        </p>
+        {!nothingAdded && (
+          <p className="text-base text-stone-600">
+            <mark className="rounded bg-yellow-200 px-1">노란색</mark> 부분이 새로 더해진 부분이에요. 내 상황에 맞게 고쳐 써도 좋아요.
+          </p>
+        )}
       </div>
 
       <div className="space-y-3 rounded-2xl bg-white p-5">

@@ -21,7 +21,7 @@ export const ANALYSIS_SCHEMA = {
     directions: ['개선 방향 (생략 가능)'],
   },
   improvement: {
-    segments: [{ text: '문장 조각', added: 'true면 새로 더한 부분' }],
+    segments: [{ text: '문장 조각 (줄바꿈은 \\n, 이어 붙여 한 문장이 됨)', added: 'true면 새로 더한 부분' }],
     reasons: ['왜 좋아졌는지 한 문장씩'],
     tip: '추가 조언 또는 null',
   },
