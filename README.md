@@ -12,6 +12,7 @@ npm install
 npm run dev      # 개발 서버 실행 → http://localhost:5173
 npm test         # 규칙 판정 테스트
 npm run build    # 배포용 파일 만들기 (dist 폴더)
+npm run build:artifact  # HTML 파일 하나로 묶기 (dist-artifact 폴더, 공유 링크용)
 ```
 
 ## 폴더 구조
@@ -36,6 +37,11 @@ src/
 
 화면(components)은 `coachService`만 알고, 분석 방식은 `providers`에서 갈아 끼운다.
 어느 방식이든 **같은 모양의 결과**(`{ evaluation, improvement }`)를 돌려주므로 화면 코드는 고치지 않아도 된다.
+
+## 배포와 사용자 테스트
+
+- 체험 링크: https://claude.ai/artifact/M7KDRaD5f5m84BQA2ih7cU (공유 메뉴에서 공개 범위를 설정해야 다른 사람이 열 수 있다)
+- Vercel 정식 배포 방법과 사용자 테스트 계획: [docs/배포-및-사용자-테스트.md](docs/배포-및-사용자-테스트.md)
 
 ## OpenAI 연결 방법 (추후)
 
