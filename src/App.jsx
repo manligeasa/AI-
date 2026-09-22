@@ -30,10 +30,11 @@ export default function App() {
     }
   }
 
-  const handleRestart = () => {
+  /** 입력창을 비운다 (초기화) */
+  const handleClear = () => {
     setQuestion('')
     setResult(null)
-    goTo(1)
+    setError('')
   }
 
   return (
@@ -48,6 +49,7 @@ export default function App() {
           <QuestionInput
             value={question}
             onChange={setQuestion}
+            onClear={handleClear}
             onSubmit={handleSubmit}
             loading={loading}
             error={error}
@@ -67,7 +69,7 @@ export default function App() {
             question={question}
             improvement={result.improvement}
             onBack={() => goTo(2)}
-            onRestart={handleRestart}
+            onRewrite={() => goTo(1)}
           />
         )}
       </main>
