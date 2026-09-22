@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { evaluate } from './evaluate.js'
 import { improve } from './improve.js'
+import { analyzeByKeywords } from './keywordAnalyzer.js'
 
 const statusOf = (evaluation) =>
   Object.fromEntries(evaluation.criteria.map((c) => [c.id, c.status]))
@@ -24,11 +25,32 @@ describe('evaluate', () => {
     expect(e.stars).toBe(5)
   })
 
-  it('약한 단서는 조금 부족으로 판정한다', () => {
-    const s = statusOf(evaluate('수강생 강의 자료 간단히 만들어줘'))
-    expect(s.audience).toBe('partial')
-    expect(s.format).toBe('partial')
-    expect(s.role).toBe('missing')
+})
+
+describe('analyzeByKeywords', () => {
+  it('키워드로 충족·부족 항목과 점수를 돌려준다', () => {
+    const r = analyzeByKeywords('50대 초보자를 위한 유튜브 대본을 친근하게 작성해줘')
+    expect(r.met).toEqual(['목적', '대상', '형식', '말투'])
+    expect(r.missing).toEqual(['상황', '역할'])
+    expect(r.score).toBe(67)
+    expect(r.advice).toHaveLength(2)
+    expect(r.advice[0]).toMatch(/^상황: /)
+  })
+
+  it('띄어쓰기가 달라도 키워드를 찾는다', () => {
+    expect(analyzeByKeywords('글을 만들어 줘').met).toContain('목적')
+  })
+
+  it('"목표"의 "표"는 형식으로 보지 않는다', () => {
+    const r = analyzeByKeywords('올해 목표를 알려줘')
+    expect(r.missing).toContain('형식')
+    expect(r.details.find((d) => d.id === 'format').matched).toEqual([])
+  })
+
+  it('키워드가 하나도 없으면 0점이다', () => {
+    const r = analyzeByKeywords('건강')
+    expect(r.score).toBe(0)
+    expect(r.met).toEqual([])
   })
 })
 

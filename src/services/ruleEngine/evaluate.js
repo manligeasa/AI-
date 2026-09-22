@@ -1,23 +1,20 @@
 import { CRITERIA, STATUS } from '../criteria.js'
-import { RULES, judge } from './rules.js'
+import { analyzeByKeywords } from './keywordAnalyzer.js'
 import { josa, joinWithAnd } from './korean.js'
 
-const POINTS = { [STATUS.GOOD]: 2, [STATUS.PARTIAL]: 1, [STATUS.MISSING]: 0 }
-
-/** 질문을 6가지 기준으로 평가한다. */
+/** 키워드 분석 결과를 화면용 평가(별점, 총평, 기준 카드)로 바꾼다. */
 export function evaluate(question) {
-  const text = question.trim()
+  const analysis = analyzeByKeywords(question)
 
   const criteria = CRITERIA.map((c) => {
-    const status = judge(RULES[c.id], text)
+    const detail = analysis.details.find((d) => d.id === c.id)
+    const status = detail.met ? STATUS.GOOD : STATUS.MISSING
     return { id: c.id, label: c.label, question: c.question, status, message: c.messages[status] }
   })
 
-  const total = criteria.reduce((sum, c) => sum + POINTS[c.status], 0)
-  const max = criteria.length * POINTS[STATUS.GOOD]
-  const stars = 1 + Math.round((total / max) * 4)
+  const stars = 1 + Math.round((analysis.score / 100) * 4)
 
-  return { stars, summary: summarize(criteria), criteria }
+  return { score: analysis.score, stars, summary: summarize(criteria), criteria, advice: analysis.advice }
 }
 
 /** "잘한 점 → 보완할 점" 순서로 한 줄 총평을 만든다. */

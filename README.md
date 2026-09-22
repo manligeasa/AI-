@@ -27,8 +27,8 @@ src/
    │  ├─ ruleBasedProvider.js   규칙 기반 분석 (현재 사용)
    │  └─ openaiProvider.js      OpenAI 분석 자리 (추후 연결)
    └─ ruleEngine/
-      ├─ rules.js               기준별 판정 규칙(단어 패턴)
-      ├─ evaluate.js            6가지 기준 평가 + 별점 + 총평
+      ├─ keywordAnalyzer.js     키워드 목록 + analyzeByKeywords(점수·충족·부족·조언)
+      ├─ evaluate.js            키워드 분석 결과를 별점·총평·기준 카드로 변환
       ├─ improve.js             빠진 기준을 채운 개선 질문 만들기
       └─ domains.js             분야별(SNS·강의·업무·일상) 추천 문구
 ```
