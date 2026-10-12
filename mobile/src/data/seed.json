@@ -3,5 +3,8 @@
   "history": [],
   "settings": {
     "showTips": true
+  },
+  "rolePlay": {
+    "bestScore": 0
   }
 }

@@ -1,9 +1,11 @@
 import { colors } from './theme/colors';
 import condolenceDeck from './data/cards/condolence.json';
+import RolePlayScreen from './screens/RolePlayScreen';
 
 /**
  * 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다.
- * deck이 있는 탭은 스와이프 카드 화면, 없는 탭은 기본(준비 중) 화면을 보여 준다.
+ * Screen이 있는 탭은 그 화면, deck이 있는 탭은 스와이프 카드 화면,
+ * 둘 다 없는 탭은 기본(준비 중) 화면을 보여 준다.
  */
 export const TABS = [
   {
@@ -11,8 +13,7 @@ export const TABS = [
     label: '상황극',
     color: colors.pink,
     icon: require('./assets/lottie/roleplay.json'),
-    description: 'AI와 역할을 나눠 실제 상황처럼 대화를 연습해요.',
-    features: ['병원 예약, 손주와 영상통화 등 생활 속 상황 고르기', 'AI가 상대 역할을 맡아 한 마디씩 주고받기', '대화가 끝나면 잘한 점과 더 좋은 표현 알려 주기'],
+    Screen: RolePlayScreen,
   },
   {
     key: 'audio',
