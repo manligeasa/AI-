@@ -1,6 +1,10 @@
 import { colors } from './theme/colors';
+import condolenceDeck from './data/cards/condolence.json';
 
-/** 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다. */
+/**
+ * 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다.
+ * deck이 있는 탭은 스와이프 카드 화면, 없는 탭은 기본(준비 중) 화면을 보여 준다.
+ */
 export const TABS = [
   {
     key: 'roleplay',
@@ -31,7 +35,6 @@ export const TABS = [
     label: '소통 카드',
     color: colors.purple,
     icon: require('./assets/lottie/cards.json'),
-    description: 'AI에게 바로 쓸 수 있는 문장을 카드로 모아 봐요.',
-    features: ['칼럼·대본·강의안 등 목적별 질문 문장 카드', '카드를 눌러 바로 복사하기', '마음에 드는 카드는 즐겨찾기로 보관'],
+    deck: condolenceDeck,
   },
 ];
