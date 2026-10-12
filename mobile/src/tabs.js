@@ -1,6 +1,7 @@
 import { colors } from './theme/colors';
 import condolenceDeck from './data/cards/condolence.json';
 import RolePlayScreen from './screens/RolePlayScreen';
+import AudioGuideScreen from './screens/AudioGuideScreen';
 
 /**
  * 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다.
@@ -20,8 +21,7 @@ export const TABS = [
     label: '오디오',
     color: colors.blue,
     icon: require('./assets/lottie/audio.json'),
-    description: '눈이 피곤할 땐 귀로 들으며 배워요.',
-    features: ['생성형 AI 기초 개념을 짧은 음성 강의로 듣기', '재생 속도 조절과 이어 듣기', '들은 내용을 한 줄로 정리해 보여 주기'],
+    Screen: AudioGuideScreen,
   },
   {
     key: 'quiz',

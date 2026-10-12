@@ -20,6 +20,14 @@ npm start          # QR 코드가 뜨면 휴대폰의 Expo Go 앱으로 찍는�
 npm run web        # 컴퓨터 브라우저로 미리 보기
 ```
 
+## 오디오 가이드: 무료 음성 읽기(TTS)
+
+- 휴대폰에 기본으로 들어 있는 음성 읽기 기능(expo-speech)을 쓴다. 유료 클라우드 음성 서비스나 인터넷이 필요 없다.
+- 듣기 버튼을 누르면 "마음이 많이 아프시겠어요"를 한국어(ko-KR)로 읽고, 읽는 동안 버튼 주변으로 네온 빛 고리가 물결처럼 퍼진다: `src/components/NeonPulse.js`.
+- 다시 누르면 멈춘다. 읽는 속도는 '천천히(0.75배)'와 '보통' 중에서 고른다.
+- 읽을 문장: `src/data/audio/phrases.json`.
+- 한국어 음성이 없는 휴대폰이면 설정 방법을 화면에 안내한다. 소리는 휴대폰 TTS 설정의 목소리를 따른다.
+
 ## 상황극 연습: 선택형 게임
 
 - 장례식장·병원·카페·결혼식장·문자 사기 5가지 상황에서 알맞은 말을 고른다. 문장은 초급 한국어 수준이다.
@@ -44,6 +52,7 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 | 예시 질문 | `src/data/exampleQuestions.json` | 앱에 함께 들어가는 읽기 전용 JSON |
 | 소통 카드 묶음 | `src/data/cards/*.json` | 카드 내용 (읽기 전용 JSON) |
 | 기본값 | `src/data/seed.json` | 처음 실행할 때 쓰는 빈 데이터 모양 |
+| 오디오 문장 | `src/data/audio/phrases.json` | 읽어 줄 문장 (읽기 전용 JSON) |
 | 상황극 문제 | `src/data/roleplay/scenarios.json` | 상황·선택지 (읽기 전용 JSON) |
 | 보관함·상황극 최고 점수 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
 
@@ -64,7 +73,7 @@ mobile/
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
    ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
    ├─ state/                RolePlayContext(상황극 게임 상태, Context API)
-   ├─ screens/              RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
+   ├─ screens/              AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출
    ├─ storage/              로컬 JSON 저장소와 화면용 훅
    └─ data/                 앱에 포함되는 JSON 파일
