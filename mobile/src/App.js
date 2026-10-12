@@ -22,7 +22,7 @@ export default function App() {
           {TABS.map((t) => (
             <View key={t.key} style={[styles.root, tab !== t.key && styles.hidden]}>
               {t.Screen ? (
-                <t.Screen label={t.label} color={t.color} />
+                <t.Screen label={t.label} color={t.color} deck={t.deck} />
               ) : t.deck ? (
                 <CardDeckScreen label={t.label} color={t.color} deck={t.deck} />
               ) : (

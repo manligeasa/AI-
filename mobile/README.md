@@ -35,6 +35,14 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 - 정답을 누르면 누른 자리에서 네온 파티클(빛 조각) 44개와 빛 고리가 터진다: `src/components/NeonBurst.js`. 오답은 버튼이 좌우로 흔들리고 정답을 초록색으로 알려 준다.
 - 상태 관리: `src/state/RolePlayContext.js`. 서버 없이 Context API(앱 안에서 데이터를 공유하는 React 기본 기능)와 useReducer로 관리한다. 탭을 옮겨도 진행 상황이 유지되고, 최고 점수만 휴대폰 안 JSON 파일(`rolePlay.bestScore`)에 저장한다.
 
+## 소통 카드: 보여 주는 카드
+
+- 소통 카드 탭 위쪽에서 '보여 주는 카드'와 '조문 순서'를 바꿔 본다.
+- 체크박스로 내 상황(종교적 이유, 무릎·허리 통증, 귀가 잘 안 들림, 한국어가 서툼)을 고르면 상대에게 보여 줄 문장이 바로 크게 나타난다. 예) 종교적 이유 → "제 종교 때문에 절 대신 묵념하겠습니다."
+- 여러 개를 고르면 문장이 차례로 함께 나온다. '화면 가득 크게 보여 주기'를 누르면 화면에 꽉 차는 크기로 보여 주고, 화면을 누르면 닫힌다.
+- 검은 바탕에 라임 네온 글자를 써서 명암 대비가 약 17:1이다 (웹 접근성 기준 최고 등급 7:1보다 높음).
+- 서버 통신 없이 휴대폰 화면 안에서만 만들어진다. 상황과 문장: `src/data/cards/situations.json`.
+
 ## 소통 카드: 장례식장 조문 순서
 
 - 7장의 카드를 옆으로 넘기며 조문 순서를 배운다. 손가락이 불편한 분을 위해 '이전/다음' 버튼도 있다.
@@ -50,7 +58,7 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 | 데이터 | 위치 | 설명 |
 | --- | --- | --- |
 | 예시 질문 | `src/data/exampleQuestions.json` | 앱에 함께 들어가는 읽기 전용 JSON |
-| 소통 카드 묶음 | `src/data/cards/*.json` | 카드 내용 (읽기 전용 JSON) |
+| 소통 카드 | `src/data/cards/*.json` | 조문 순서 카드·상황별 문장 (읽기 전용 JSON) |
 | 기본값 | `src/data/seed.json` | 처음 실행할 때 쓰는 빈 데이터 모양 |
 | 오디오 문장 | `src/data/audio/phrases.json` | 읽어 줄 문장 (읽기 전용 JSON) |
 | 상황극 문제 | `src/data/roleplay/scenarios.json` | 상황·선택지 (읽기 전용 JSON) |
@@ -73,7 +81,7 @@ mobile/
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
    ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
    ├─ state/                RolePlayContext(상황극 게임 상태, Context API)
-   ├─ screens/              AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
+   ├─ screens/              CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출
    ├─ storage/              로컬 JSON 저장소와 화면용 훅
    └─ data/                 앱에 포함되는 JSON 파일

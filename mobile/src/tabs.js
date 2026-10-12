@@ -2,6 +2,7 @@ import { colors } from './theme/colors';
 import condolenceDeck from './data/cards/condolence.json';
 import RolePlayScreen from './screens/RolePlayScreen';
 import AudioGuideScreen from './screens/AudioGuideScreen';
+import CommunicationScreen from './screens/CommunicationScreen';
 
 /**
  * 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다.
@@ -36,6 +37,7 @@ export const TABS = [
     label: '소통 카드',
     color: colors.purple,
     icon: require('./assets/lottie/cards.json'),
+    Screen: CommunicationScreen,
     deck: condolenceDeck,
   },
 ];
