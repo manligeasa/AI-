@@ -1,7 +1,15 @@
 # AI 질문 코치 — 모바일 앱 (Expo)
 
-웹앱과 같은 **규칙 기반 질문 평가**를 휴대폰 앱으로 옮긴 버전이다.
+AI 입문자를 위한 학습 앱이다. 하단 탭 4개(상황극·오디오·퀴즈·소통 카드)로 구성된다.
 어두운 바탕에 네온 핑크·라임 그린·일렉트릭 블루를 포인트로 쓴 다크 테마다.
+
+## 하단 탭과 아이콘 애니메이션
+
+- 탭 목록(이름·색·아이콘·소개 문구): `src/tabs.js`
+- 탭을 누를 때마다 아이콘이 통통 튄다. 오픈소스 [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native)(MIT 라이선스)로 재생한다.
+- 아이콘 애니메이션 파일(`src/assets/lottie/*.json`)은 외부 무료 소스를 받지 않고 `scripts/make-tab-icons.mjs`로 직접 만들었다. 저작권·라이선스 걱정이 없다.
+- 아이콘 색이나 움직임을 바꾸려면 그 스크립트를 고친 뒤 `npm run icons`를 실행한다.
+- 웹 미리보기에서는 Lottie 재생기가 인터넷(CDN)에서 실행 파일을 한 번 받아 온다. 휴대폰 앱은 인터넷이 필요 없다.
 
 ## 실행 방법
 
@@ -31,11 +39,14 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 mobile/
 ├─ index.js                 앱 시작점
 ├─ metro.config.js          상위 ../src 규칙 엔진을 함께 읽도록 설정
+├─ scripts/make-tab-icons.mjs  탭 아이콘 Lottie 파일 만들기
 └─ src/
-   ├─ App.js                탭 2개(코치·보관함) 화면 전환
+   ├─ App.js                하단 탭 4개 화면 전환
+   ├─ tabs.js               탭 4개 설정 (이름·색·아이콘·소개)
+   ├─ assets/lottie/        탭 아이콘 애니메이션 JSON 4개
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
-   ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바
-   ├─ screens/              CoachScreen(질문 평가), HistoryScreen(보관함)
+   ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
+   ├─ screens/              TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출
    ├─ storage/              로컬 JSON 저장소와 화면용 훅
    └─ data/                 앱에 포함되는 JSON 파일
