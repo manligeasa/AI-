@@ -89,7 +89,7 @@ export default function EnvelopeGameScreen({ label, color }) {
     <View style={styles.root}>
       {/* 끄는 동안 화면이 같이 움직이지 않도록, 다 맞힌 뒤에만 스크롤을 켠다 */}
       <ScrollView ref={scrollRef} scrollEnabled={done} contentContainerStyle={styles.content}>
-        <Text style={[styles.label, { color }]}>{label}</Text>
+        {label ? <Text style={[styles.label, { color }]}>{label}</Text> : null}
         <Text style={styles.title}>{data.title}</Text>
         <Text style={styles.guide}>{data.guide}</Text>
 

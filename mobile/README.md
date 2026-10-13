@@ -20,6 +20,16 @@ npm start          # QR 코드가 뜨면 휴대폰의 Expo Go 앱으로 찍는�
 npm run web        # 컴퓨터 브라우저로 미리 보기
 ```
 
+## 퀴즈: 스피드 OX
+
+- 퀴즈 탭 위쪽에서 [⚡ 스피드 OX | ✉️ 봉투 붙이기]를 바꿔 본다. 스피드 OX가 기본 화면이다.
+- 조문 예절·봉투·문자 사기·AI 상식 10문제가 매번 섞여 나온다. 문제마다 10초 안에 화면 가운데의 거대한 네온 O(블루) / X(핑크) 버튼을 누른다.
+- 남은 시간은 줄어드는 네온 막대와 숫자로 보여 준다. 3초 이하가 되면 핑크색으로 바뀐다.
+- 정답이면 네온 파티클이 터지고 다음 문제로 넘어간다.
+- 오답이면 "앗! 향은 입으로 불면 안 돼요!" 같은 귀여운 팝업이 '뿅' 커지며 좌우로 흔들리고, 이모지가 계속 살랑거린다: `src/components/OopsPopup.js`. 시간이 지나도 같은 팝업에 정답을 알려 준다.
+- 최고 기록은 휴대폰 안 JSON 파일(`quiz.oxBest`)에 저장한다.
+- 문제·오답 문구·설명: `src/data/quiz/ox.json`. 문제마다 `oops`(팝업 제목)와 `explain`(설명)을 따로 쓸 수 있다.
+
 ## 퀴즈: 봉투 이름표 붙이기 (드래그 앤 드롭)
 
 - 결혼식·장례식 봉투(네온 라인아트) 두 장과 '축결혼', '부의' 글자 스티커가 나온다. 스티커를 손가락으로 끌어 알맞은 봉투의 점선 칸에 놓는다.
@@ -69,10 +79,11 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 | 예시 질문 | `src/data/exampleQuestions.json` | 앱에 함께 들어가는 읽기 전용 JSON |
 | 소통 카드 | `src/data/cards/*.json` | 조문 순서 카드·상황별 문장 (읽기 전용 JSON) |
 | 기본값 | `src/data/seed.json` | 처음 실행할 때 쓰는 빈 데이터 모양 |
+| OX 퀴즈 | `src/data/quiz/ox.json` | 문제·정답·오답 팝업 문구 (읽기 전용 JSON) |
 | 봉투 퀴즈 | `src/data/quiz/envelopes.json` | 봉투·스티커·설명 (읽기 전용 JSON) |
 | 오디오 문장 | `src/data/audio/phrases.json` | 읽어 줄 문장 (읽기 전용 JSON) |
 | 상황극 문제 | `src/data/roleplay/scenarios.json` | 상황·선택지 (읽기 전용 JSON) |
-| 보관함·상황극 최고 점수 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
+| 보관함·상황극/OX 최고 기록 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
 
 - 저장·불러오기 코드: `src/storage/localStore.js` (휴대폰은 `expo-file-system`, 웹 미리보기는 브라우저 저장소)
 - 앱을 삭제하면 저장한 질문도 함께 지워진다.
@@ -91,7 +102,7 @@ mobile/
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
    ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
    ├─ state/                RolePlayContext(상황극 게임 상태, Context API)
-   ├─ screens/              EnvelopeGameScreen(봉투 퀴즈), CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
+   ├─ screens/              QuizScreen(퀴즈: OX + 봉투), OXQuizScreen(스피드 OX), EnvelopeGameScreen(봉투 퀴즈), CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출
    ├─ storage/              로컬 JSON 저장소와 화면용 훅
    └─ data/                 앱에 포함되는 JSON 파일

@@ -3,7 +3,7 @@ import condolenceDeck from './data/cards/condolence.json';
 import RolePlayScreen from './screens/RolePlayScreen';
 import AudioGuideScreen from './screens/AudioGuideScreen';
 import CommunicationScreen from './screens/CommunicationScreen';
-import EnvelopeGameScreen from './screens/EnvelopeGameScreen';
+import QuizScreen from './screens/QuizScreen';
 
 /**
  * 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다.
@@ -30,7 +30,7 @@ export const TABS = [
     label: '퀴즈',
     color: colors.lime,
     icon: require('./assets/lottie/quiz.json'),
-    Screen: EnvelopeGameScreen,
+    Screen: QuizScreen,
   },
   {
     key: 'cards',

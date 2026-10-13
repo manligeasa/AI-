@@ -6,5 +6,8 @@
   },
   "rolePlay": {
     "bestScore": 0
+  },
+  "quiz": {
+    "oxBest": 0
   }
 }
