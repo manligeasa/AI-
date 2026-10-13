@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AI 질문 코치",
-    "slug": "ai-question-coach",
+    "name": "톡톡예절",
+    "slug": "toktok-yejeol",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "backgroundColor": "#0A0A12",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.manligeasa.aiquestioncoach"
+      "bundleIdentifier": "com.manligeasa.toktokyejeol"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +18,7 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "package": "com.manligeasa.aiquestioncoach"
+      "package": "com.manligeasa.toktokyejeol"
     },
     "web": {
       "favicon": "./assets/favicon.png"
