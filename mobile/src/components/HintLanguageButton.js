@@ -5,7 +5,7 @@ import { LANGUAGES, languageOf } from '../i18n/translate';
 import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
 
-/** 화면 오른쪽 위 🌏 버튼: 길게 눌렀을 때 보여 줄 모국어를 고른다. */
+/** 🌏 버튼: 길게 눌렀을 때 보여 줄 모국어를 고른다. */
 export default function HintLanguageButton() {
   const { lang, setLang } = useHint();
   const [open, setOpen] = useState(false);
@@ -58,10 +58,6 @@ export default function HintLanguageButton() {
 
 const styles = StyleSheet.create({
   pill: {
-    position: 'absolute',
-    top: space.sm,
-    right: space.md,
-    zIndex: 5,
     minHeight: 36,
     paddingHorizontal: 12,
     borderRadius: radius.pill,

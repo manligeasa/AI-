@@ -7,6 +7,7 @@ import NeonCard from '../components/NeonCard';
 import OXButton from '../components/OXButton';
 import OopsPopup from '../components/OopsPopup';
 import { loadData, saveData } from '../storage/localStore';
+import { useStamps } from '../state/StampContext';
 import data from '../data/quiz/ox.json';
 import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
@@ -52,6 +53,7 @@ export default function OXQuizScreen() {
   const [secondsLeft, setSecondsLeft] = useState(SECONDS);
   const timeBar = useRef(new Animated.Value(1)).current;
   const burstRef = useRef(null);
+  const { award } = useStamps();
   const { phase, questions, index, score, reason, best } = state;
   const q = questions[index];
 
@@ -59,6 +61,11 @@ export default function OXQuizScreen() {
   useEffect(() => {
     loadData().then((d) => dispatch({ type: 'loadBest', best: d.quiz?.oxBest ?? 0 }));
   }, []);
+
+  // 끝까지 풀면 스탬프, 모두 맞히면 만점 스탬프
+  useEffect(() => {
+    if (phase === 'result') award(score === TOTAL ? ['ox', 'ox_perfect'] : ['ox']);
+  }, [phase, score, award]);
 
   // 게임이 끝나면 최고 기록을 휴대폰 안 JSON 파일에 저장
   useEffect(() => {

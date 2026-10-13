@@ -913,5 +913,125 @@
     "vi": "부의 (賻儀): cùng chia sẻ nỗi buồn. Ghi trên phong bì tiền phúng viếng.",
     "zh": "奠仪（賻儀）：分担悲伤。写在丧礼奠仪信封上。",
     "fil": "부의 (賻儀): pakikiisa sa pighati. Isinusulat sa sobre ng abuloy sa lamay."
+  },
+  "네온 스탬프판": {
+    "vi": "Bảng tem neon",
+    "zh": "霓虹印章册",
+    "fil": "Neon stamp board"
+  },
+  "퀴즈와 상황극을 마치면 스탬프를 받아요": {
+    "vi": "Hoàn thành câu đố và đóng vai tình huống để nhận tem",
+    "zh": "完成测验和情景剧就能获得印章",
+    "fil": "Makakakuha ka ng stamp kapag natapos mo ang pagsusulit at role-play"
+  },
+  "상황극 완주": {
+    "vi": "Hoàn thành đóng vai",
+    "zh": "完成情景剧",
+    "fil": "Natapos ang role-play"
+  },
+  "상황극 5문제를 끝까지 풀어요": {
+    "vi": "Làm hết 5 câu đóng vai tình huống",
+    "zh": "把 5 道情景剧题目做完",
+    "fil": "Tapusin ang 5 tanong sa role-play"
+  },
+  "상황극 만점": {
+    "vi": "Điểm tuyệt đối đóng vai",
+    "zh": "情景剧满分",
+    "fil": "Perpektong iskor sa role-play"
+  },
+  "상황극 5문제를 모두 맞혀요": {
+    "vi": "Trả lời đúng cả 5 câu đóng vai",
+    "zh": "5 道情景剧题目全部答对",
+    "fil": "Tamang sagot sa lahat ng 5 tanong sa role-play"
+  },
+  "OX 퀴즈 완주": {
+    "vi": "Hoàn thành câu đố Đúng/Sai",
+    "zh": "完成对错测验",
+    "fil": "Natapos ang Tama o Mali"
+  },
+  "스피드 OX 10문제를 끝까지 풀어요": {
+    "vi": "Làm hết 10 câu Đúng/Sai tốc độ",
+    "zh": "把 10 道快速对错题做完",
+    "fil": "Tapusin ang 10 tanong sa mabilisang Tama o Mali"
+  },
+  "OX 만점": {
+    "vi": "Điểm tuyệt đối Đúng/Sai",
+    "zh": "对错测验满分",
+    "fil": "Perpektong iskor sa Tama o Mali"
+  },
+  "스피드 OX 10문제를 모두 맞혀요": {
+    "vi": "Trả lời đúng cả 10 câu Đúng/Sai tốc độ",
+    "zh": "10 道快速对错题全部答对",
+    "fil": "Tamang sagot sa lahat ng 10 tanong sa mabilisang Tama o Mali"
+  },
+  "봉투 박사": {
+    "vi": "Chuyên gia phong bì",
+    "zh": "信封博士",
+    "fil": "Eksperto sa sobre"
+  },
+  "봉투 이름표를 모두 붙여요": {
+    "vi": "Dán hết nhãn lên phong bì",
+    "zh": "把信封标签全部贴好",
+    "fil": "Idikit ang lahat ng label sa sobre"
+  },
+  "한 번에 성공": {
+    "vi": "Thành công ngay lần đầu",
+    "zh": "一次成功",
+    "fil": "Tagumpay sa unang subok"
+  },
+  "봉투 이름표를 한 번도 틀리지 않고 붙여요": {
+    "vi": "Dán nhãn phong bì mà không sai lần nào",
+    "zh": "一次都不出错地贴好信封标签",
+    "fil": "Idikit ang mga label sa sobre nang walang kahit isang mali"
+  },
+  "모은 스탬프 {n} / {total}": {
+    "vi": "Tem đã sưu tập: {n} / {total}",
+    "zh": "已收集印章：{n} / {total}",
+    "fil": "Naipong stamp: {n} / {total}"
+  },
+  "스탬프판 보기": {
+    "vi": "Xem bảng tem",
+    "zh": "查看印章册",
+    "fil": "Tingnan ang stamp board"
+  },
+  "확인": {
+    "vi": "Đồng ý",
+    "zh": "确定",
+    "fil": "OK"
+  },
+  "취소": {
+    "vi": "Hủy",
+    "zh": "取消",
+    "fil": "Kanselahin"
+  },
+  "모두 지우기": {
+    "vi": "Xóa hết",
+    "zh": "全部删除",
+    "fil": "Burahin lahat"
+  },
+  "스탬프 처음부터 다시 모으기": {
+    "vi": "Sưu tập lại tem từ đầu",
+    "zh": "从头重新收集印章",
+    "fil": "Mag-ipon muli ng stamp mula sa simula"
+  },
+  "네온 스탬프 획득!": {
+    "vi": "Nhận được tem neon!",
+    "zh": "获得霓虹印章！",
+    "fil": "Nakakuha ka ng neon stamp!"
+  },
+  "스탬프를 모두 지울까요? 되돌릴 수 없어요.": {
+    "vi": "Xóa hết tem nhé? Không thể khôi phục lại.",
+    "zh": "要删除全部印章吗？删除后无法恢复。",
+    "fil": "Buburahin ba ang lahat ng stamp? Hindi na ito maibabalik."
+  },
+  "스탬프를 모두 모았어요!": {
+    "vi": "Bạn đã sưu tập đủ tất cả tem!",
+    "zh": "印章全部集齐了！",
+    "fil": "Naipon mo na ang lahat ng stamp!"
+  },
+  "정말 대단해요! 생활 예절 박사님이에요.": {
+    "vi": "Thật tuyệt vời! Bạn là chuyên gia phép lịch sự trong cuộc sống.",
+    "zh": "太厉害了！您是生活礼仪博士。",
+    "fil": "Napakahusay! Eksperto ka na sa magandang asal sa araw-araw."
   }
 }

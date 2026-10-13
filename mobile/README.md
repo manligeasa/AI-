@@ -20,6 +20,17 @@ npm start          # QR 코드가 뜨면 휴대폰의 Expo Go 앱으로 찍는�
 npm run web        # 컴퓨터 브라우저로 미리 보기
 ```
 
+## 네온 스탬프 보상
+
+- 퀴즈·상황극을 마치면 도장 모양의 네온 스탬프를 준다. 모두 6개다.
+  - 상황극: 끝까지 풀기 / 만점
+  - 스피드 OX: 끝까지 풀기 / 만점
+  - 봉투 붙이기: 모두 붙이기 / 한 번도 틀리지 않기
+- 새 스탬프를 받으면 도장이 위에서 '쾅' 찍히는 팝업이 뜬다. 6개를 모두 모으면 화면 가득 네온 폭죽이 계속 터진다.
+- 오른쪽 위 🏅 버튼(예: 🏅 2/6)으로 스탬프판을 연다. 못 받은 스탬프는 받는 방법이 적혀 있다. 강의 실습용으로 '스탬프 처음부터 다시 모으기' 버튼도 있다.
+- 획득 기록은 클라우드 DB 없이 **기기 내부 저장소(AsyncStorage)** 에만 저장한다. 안드로이드는 앱 전용 내부 저장소, iOS는 앱 전용 저장 파일, 웹 미리보기는 브라우저 localStorage에 들어간다. 키는 `neonStamps:v1`, 값은 `{ 스탬프 id: 받은 시각 }`이다. 앱을 지우면 기록도 지워진다.
+- 관련 파일: `src/state/StampContext.js`(상태·팝업·스탬프판·축하 화면), `src/storage/stampStore.js`(AsyncStorage), `src/components/NeonStamp.js`, `src/components/Fireworks.js`, `src/data/stamps.json`(스탬프 목록)
+
 ## 모국어 힌트 툴팁 (베트남어·중국어·필리핀어)
 
 - 화면의 한국어 문장을 **길게 누르면**(0.4초) 누른 자리 위에 작은 말풍선으로 모국어 뜻이 나타난다. 화면을 누르거나 5초가 지나면 사라진다.
@@ -94,6 +105,8 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 | 오디오 문장 | `src/data/audio/phrases.json` | 읽어 줄 문장 (읽기 전용 JSON) |
 | 상황극 문제 | `src/data/roleplay/scenarios.json` | 상황·선택지 (읽기 전용 JSON) |
 | 모국어 힌트 번역 | `src/i18n/translations.json` | 한국어 → 베트남어·중국어·필리핀어 (읽기 전용 JSON) |
+| 네온 스탬프 획득 기록 | 기기 내부 저장소 AsyncStorage (`neonStamps:v1`) | 받은 스탬프와 시각 |
+| 스탬프 목록 | `src/data/stamps.json` | 스탬프 이름·받는 방법 (읽기 전용 JSON) |
 | 보관함·상황극/OX 최고 기록·힌트 언어 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
 
 - 저장·불러오기 코드: `src/storage/localStore.js` (휴대폰은 `expo-file-system`, 웹 미리보기는 브라우저 저장소)
@@ -113,7 +126,7 @@ mobile/
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
    ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
    ├─ i18n/                 모국어 힌트 (번역 사전·툴팁·언어 상태)
-   ├─ state/                RolePlayContext(상황극 게임 상태, Context API)
+   ├─ state/                RolePlayContext(상황극 게임 상태), StampContext(네온 스탬프 보상) — Context API
    ├─ screens/              QuizScreen(퀴즈: OX + 봉투), OXQuizScreen(스피드 OX), EnvelopeGameScreen(봉투 퀴즈), CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출
    ├─ storage/              로컬 JSON 저장소와 화면용 훅

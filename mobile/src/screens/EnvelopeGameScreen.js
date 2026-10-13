@@ -7,6 +7,7 @@ import NeonBurst from '../components/NeonBurst';
 import NeonButton from '../components/NeonButton';
 import NeonCard from '../components/NeonCard';
 import data from '../data/quiz/envelopes.json';
+import { useStamps } from '../state/StampContext';
 import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
 
@@ -31,14 +32,17 @@ export default function EnvelopeGameScreen({ label, color }) {
   const zoneRects = useRef({});
   const burstRef = useRef(null);
   const scrollRef = useRef(null);
+  const mistakes = useRef(0); // 이번 판에서 틀린 횟수
+  const { award } = useStamps();
 
   const done = Object.keys(placed).length === data.stickers.length;
 
-  // 다 맞히면 설명 카드가 보이도록 아래로 내린다
+  // 다 맞히면 스탬프를 주고, 설명 카드가 보이도록 아래로 내린다
   useEffect(() => {
+    if (done) award(mistakes.current === 0 ? ['envelope', 'envelope_perfect'] : ['envelope']);
     if (done) setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 300);
     else scrollRef.current?.scrollTo({ y: 0, animated: false });
-  }, [done]);
+  }, [done, award]);
 
   /** 끌기를 시작할 때 봉투 자리의 화면 위치를 새로 잰다 */
   const measureZones = () => {
@@ -65,6 +69,7 @@ export default function EnvelopeGameScreen({ label, color }) {
     const id = zoneAt(px, py);
     if (!id) return null;
     if (id !== sticker.target) {
+      mistakes.current += 1;
       setMessage({ ok: false, text: sticker.wrongHint });
       return null;
     }
@@ -79,6 +84,7 @@ export default function EnvelopeGameScreen({ label, color }) {
   };
 
   const restart = () => {
+    mistakes.current = 0;
     setPlaced({});
     setMessage(null);
     setRound((r) => r + 1);

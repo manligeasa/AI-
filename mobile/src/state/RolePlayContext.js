@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer } from 'react';
 import { loadData, saveData } from '../storage/localStore';
+import { useStamps } from './StampContext';
 import data from '../data/roleplay/scenarios.json';
 
 /**
@@ -43,11 +44,18 @@ function reducer(state, action) {
 
 export function RolePlayProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { award } = useStamps();
 
   // 처음 열 때 저장된 최고 점수를 불러온다
   useEffect(() => {
     loadData().then((d) => dispatch({ type: 'loadBest', bestScore: d.rolePlay?.bestScore ?? 0 }));
   }, []);
+
+  // 끝까지 풀면 스탬프, 모두 맞히면 만점 스탬프
+  useEffect(() => {
+    if (!state.finished) return;
+    award(state.score === SCENARIOS.length ? ['roleplay', 'roleplay_perfect'] : ['roleplay']);
+  }, [state.finished, state.score, award]);
 
   // 게임이 끝나면 최고 점수를 JSON 파일에 저장한다
   useEffect(() => {

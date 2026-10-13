@@ -26,6 +26,7 @@ const IGNORE = new Set([
   '읽기 멈추기',
   '질문을 조금 더 적어 주세요.',
   'useRolePlay는 RolePlayProvider 안에서 써야 해요.',
+  'useStamps는 StampProvider 안에서 써야 해요.',
   '화면을 누르면 닫혀요', // 상대에게 보여 주는 전체 화면 안내 (툴팁이 뜨지 않는 창)
 ]);
 // JSON 데이터에서 번역하지 않는 칸
