@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useRef, useState } from 'react';
 import { Animated, Easing, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import HintText from '../components/HintText';
 import NeonBurst from '../components/NeonBurst';
 import NeonButton from '../components/NeonButton';
 import NeonCard from '../components/NeonCard';
@@ -103,13 +104,17 @@ export default function OXQuizScreen() {
       <ScrollView contentContainerStyle={styles.content}>
         {phase === 'intro' ? (
           <NeonCard accent={colors.lime}>
-            <Text style={styles.bigTitle}>{data.title} ⚡</Text>
+            <HintText hint={data.title} style={styles.bigTitle}>
+              {data.title} ⚡
+            </HintText>
             {data.rules.map((r) => (
-              <Text key={r} style={styles.rule}>
+              <HintText key={r} hint={r} style={styles.rule}>
                 • {r}
-              </Text>
+              </HintText>
             ))}
-            <Text style={styles.best}>내 최고 기록: {best} / {TOTAL}</Text>
+            <HintText hint="내 최고 기록: {n} / {total}" params={{ n: best, total: TOTAL }} style={styles.best}>
+              내 최고 기록: {best} / {TOTAL}
+            </HintText>
             <NeonButton title="시작하기" color={colors.lime} onPress={() => dispatch({ type: 'start' })} style={styles.start} />
           </NeonCard>
         ) : (
@@ -126,10 +131,12 @@ export default function OXQuizScreen() {
     <View style={styles.root}>
       <View style={styles.play}>
         <View style={styles.statusRow}>
-          <Text style={styles.status}>
+          <HintText hint="문제 {n} / {total}" params={{ n: index + 1, total: TOTAL }} style={styles.status}>
             문제 {index + 1} / {TOTAL}
-          </Text>
-          <Text style={[styles.status, { color: colors.lime }]}>⭐ {score}점</Text>
+          </HintText>
+          <HintText hint="⭐ {score}점" params={{ score }} style={[styles.status, { color: colors.lime }]}>
+            ⭐ {score}점
+          </HintText>
         </View>
 
         <View style={styles.timerRow}>
@@ -142,7 +149,7 @@ export default function OXQuizScreen() {
         </View>
 
         <NeonCard accent={colors.blue} style={styles.questionCard}>
-          <Text style={styles.question}>{q.q}</Text>
+          <HintText style={styles.question}>{q.q}</HintText>
         </NeonCard>
 
         <View style={styles.oxRow}>
@@ -157,7 +164,8 @@ export default function OXQuizScreen() {
         visible={phase === 'oops'}
         emoji={reason === 'timeout' ? '⏰' : '🙈'}
         title={reason === 'timeout' ? '앗! 시간이 다 됐어요!' : q.oops}
-        text={`${reason === 'timeout' ? `정답은 ${q.answer ? 'O' : 'X'}예요. ` : ''}${q.explain}`}
+        note={reason === 'timeout' ? { hint: '정답은 {answer}예요.', params: { answer: q.answer ? 'O' : 'X' } } : null}
+        text={q.explain}
         buttonTitle={index === TOTAL - 1 ? '결과 보기' : '알겠어요! 다음 문제 →'}
         onClose={() => dispatch({ type: 'next' })}
       />
@@ -174,8 +182,10 @@ function Result({ score, best, onRestart }) {
       <Text style={styles.resultScore}>
         {score} <Text style={styles.resultTotal}>/ {TOTAL}</Text>
       </Text>
-      <Text style={styles.rule}>{message}</Text>
-      <Text style={styles.best}>내 최고 기록: {best} / {TOTAL}</Text>
+      <HintText style={styles.rule}>{message}</HintText>
+      <HintText hint="내 최고 기록: {n} / {total}" params={{ n: best, total: TOTAL }} style={styles.best}>
+        내 최고 기록: {best} / {TOTAL}
+      </HintText>
       <NeonButton title="다시 도전하기" color={colors.lime} onPress={onRestart} style={styles.start} />
     </NeonCard>
   );

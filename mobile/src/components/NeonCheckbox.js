@@ -1,15 +1,18 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useHint } from '../i18n/HintContext';
 import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
 
 /** 크게 누르기 쉬운 체크박스 한 줄 (줄 전체 어디를 눌러도 선택된다) */
 export default function NeonCheckbox({ label, emoji, checked, color = colors.lime, onToggle }) {
+  const { show } = useHint();
   return (
     <Pressable
       accessibilityRole="checkbox"
       accessibilityState={{ checked }}
       accessibilityLabel={label}
       onPress={onToggle}
+      onLongPress={(e) => show(label, null, e)}
       style={({ pressed }) => [
         styles.row,
         { borderColor: checked ? color : colors.border, backgroundColor: checked ? `${color}14` : colors.surface },

@@ -2,21 +2,31 @@
   "title": "봉투 이름표 붙이기",
   "guide": "아래 스티커를 끌어서 알맞은 봉투에 붙여 보세요",
   "envelopes": [
-    { "id": "wedding", "event": "결혼식", "emoji": "💐" },
-    { "id": "funeral", "event": "장례식", "emoji": "🕯️" }
+    {
+      "id": "wedding",
+      "event": "결혼식",
+      "emoji": "💐"
+    },
+    {
+      "id": "funeral",
+      "event": "장례식",
+      "emoji": "🕯️"
+    }
   ],
   "stickers": [
     {
       "id": "chukgyeolhon",
       "text": "축결혼",
       "target": "wedding",
-      "wrongHint": "'축결혼'은 결혼을 축하하는 말이에요. 결혼식 봉투에 붙여요."
+      "wrongHint": "'축결혼'은 결혼을 축하하는 말이에요. 결혼식 봉투에 붙여요.",
+      "rightHint": "맞아요! '축결혼'은 결혼식 봉투에 써요."
     },
     {
       "id": "buui",
       "text": "부의",
       "target": "funeral",
-      "wrongHint": "'부의'는 돌아가신 분께 드리는 돈이라는 뜻이에요. 장례식 봉투에 붙여요."
+      "wrongHint": "'부의'는 돌아가신 분께 드리는 돈이라는 뜻이에요. 장례식 봉투에 붙여요.",
+      "rightHint": "맞아요! '부의'는 장례식 봉투에 써요."
     }
   ],
   "summary": [

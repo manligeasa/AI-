@@ -20,6 +20,16 @@ npm start          # QR 코드가 뜨면 휴대폰의 Expo Go 앱으로 찍는�
 npm run web        # 컴퓨터 브라우저로 미리 보기
 ```
 
+## 모국어 힌트 툴팁 (베트남어·중국어·필리핀어)
+
+- 화면의 한국어 문장을 **길게 누르면**(0.4초) 누른 자리 위에 작은 말풍선으로 모국어 뜻이 나타난다. 화면을 누르거나 5초가 지나면 사라진다.
+- 버튼·선택지·체크박스·탭은 길게 눌러도 실행되지 않고 힌트만 보여 준다. 짧게 누르면 원래대로 동작한다.
+- 오른쪽 위 🌏 버튼에서 힌트 언어(🇻🇳 Tiếng Việt / 🇨🇳 中文 / 🇵🇭 Filipino / 끄기)를 고른다. 고른 언어는 휴대폰 안 JSON 파일(`settings.hintLanguage`)에 저장된다.
+- 번역은 유료 번역 API 없이 `src/i18n/translations.json`에 미리 넣어 두었다. 한국어 문장이 그대로 열쇠이고, 숫자가 들어가는 문장은 `문제 {n} / {total}` 같은 틀을 쓴다.
+- **번역 빠짐 검사:** `npm run check:i18n`. 화면 코드와 데이터 JSON에서 한국어 문장을 모두 찾아 세 언어 번역이 있는지 확인한다. 문장을 새로 넣거나 고치면 이 검사를 돌리고, 빠진 문장을 사전에 추가한다.
+- 관련 파일: `src/i18n/HintContext.js`(툴팁·언어 상태), `src/components/HintText.js`(길게 누르면 힌트가 뜨는 글자), `src/components/HintLanguageButton.js`(🌏 언어 고르기), `scripts/check-translations.mjs`(검사)
+- 번역은 쉬운 말로 뜻이 전달되도록 썼다. '상주', '부의' 같은 한국 문화 용어는 짧은 설명을 붙였다. 실제 배포 전에는 원어민 검토를 권한다.
+
 ## 퀴즈: 스피드 OX
 
 - 퀴즈 탭 위쪽에서 [⚡ 스피드 OX | ✉️ 봉투 붙이기]를 바꿔 본다. 스피드 OX가 기본 화면이다.
@@ -83,7 +93,8 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 | 봉투 퀴즈 | `src/data/quiz/envelopes.json` | 봉투·스티커·설명 (읽기 전용 JSON) |
 | 오디오 문장 | `src/data/audio/phrases.json` | 읽어 줄 문장 (읽기 전용 JSON) |
 | 상황극 문제 | `src/data/roleplay/scenarios.json` | 상황·선택지 (읽기 전용 JSON) |
-| 보관함·상황극/OX 최고 기록 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
+| 모국어 힌트 번역 | `src/i18n/translations.json` | 한국어 → 베트남어·중국어·필리핀어 (읽기 전용 JSON) |
+| 보관함·상황극/OX 최고 기록·힌트 언어 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
 
 - 저장·불러오기 코드: `src/storage/localStore.js` (휴대폰은 `expo-file-system`, 웹 미리보기는 브라우저 저장소)
 - 앱을 삭제하면 저장한 질문도 함께 지워진다.
@@ -101,6 +112,7 @@ mobile/
    ├─ assets/lottie/        탭 아이콘 애니메이션 JSON 4개
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
    ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
+   ├─ i18n/                 모국어 힌트 (번역 사전·툴팁·언어 상태)
    ├─ state/                RolePlayContext(상황극 게임 상태, Context API)
    ├─ screens/              QuizScreen(퀴즈: OX + 봉투), OXQuizScreen(스피드 OX), EnvelopeGameScreen(봉투 퀴즈), CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출

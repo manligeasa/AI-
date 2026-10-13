@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import { Animated, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import HintText from './HintText';
 import NeonButton from './NeonButton';
 import NeonLineArt from './illustrations/NeonLineArt';
 import { colors, glow } from '../theme/colors';
@@ -55,14 +56,20 @@ export default function CardSwiper({ cards }) {
             </Animated.View>
           </View>
 
-          <Text style={[styles.title, compact && styles.titleCompact, { color }]}>{item.title}</Text>
-          <Text style={[styles.text, compact && styles.textCompact]}>{item.text}</Text>
+          <HintText style={[styles.title, compact && styles.titleCompact, { color }]}>{item.title}</HintText>
+          <HintText style={[styles.text, compact && styles.textCompact]}>{item.text}</HintText>
           {item.say ? (
             <View style={[styles.say, { borderColor: color }]}>
-              <Text style={[styles.sayText, { color }]}>“{item.say}”</Text>
+              <HintText hint={item.say} style={[styles.sayText, { color }]}>
+                “{item.say}”
+              </HintText>
             </View>
           ) : null}
-          {item.tip ? <Text style={styles.tip}>💡 {item.tip}</Text> : null}
+          {item.tip ? (
+            <HintText hint={item.tip} style={styles.tip}>
+              💡 {item.tip}
+            </HintText>
+          ) : null}
         </Animated.View>
       </View>
     );

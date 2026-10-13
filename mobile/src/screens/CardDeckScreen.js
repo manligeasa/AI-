@@ -1,5 +1,6 @@
-import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { StyleSheet, useWindowDimensions, View } from 'react-native';
 import CardSwiper from '../components/CardSwiper';
+import HintText from '../components/HintText';
 import { colors } from '../theme/colors';
 import { font, space } from '../theme/typography';
 
@@ -9,10 +10,10 @@ export default function CardDeckScreen({ label, color, deck, compactHeader }) {
   return (
     <View style={styles.root}>
       <View style={styles.header}>
-        {label ? <Text style={[styles.label, { color }]}>{label}</Text> : null}
-        <Text style={styles.title}>{deck.title}</Text>
+        {label ? <HintText style={[styles.label, { color }]}>{label}</HintText> : null}
+        <HintText style={styles.title}>{deck.title}</HintText>
         {/* 작은 화면에서는 카드 공간을 위해 안내 문구를 뺀다 */}
-        {!compactHeader && height >= 760 ? <Text style={styles.subtitle}>{deck.subtitle}</Text> : null}
+        {!compactHeader && height >= 760 ? <HintText style={styles.subtitle}>{deck.subtitle}</HintText> : null}
       </View>
       <CardSwiper cards={deck.cards} />
     </View>

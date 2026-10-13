@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import DraggableSticker from '../components/DraggableSticker';
 import EnvelopeArt from '../components/illustrations/EnvelopeArt';
+import HintText from '../components/HintText';
 import NeonBurst from '../components/NeonBurst';
 import NeonButton from '../components/NeonButton';
 import NeonCard from '../components/NeonCard';
@@ -13,8 +14,6 @@ const ENVELOPE_COLOR = { wedding: colors.pink, funeral: colors.blue };
 const HIT_SLOP = 24; // 붙일 자리보다 조금 밖에 놓아도 붙도록 여유를 둔다
 
 const shuffle = (list) => [...list].sort(() => Math.random() - 0.5);
-/** 받침이 있으면 '은', 없으면 '는' */
-const topic = (word) => word + ((word.charCodeAt(word.length - 1) - 0xac00) % 28 ? '은' : '는');
 
 /** 퀴즈: '축결혼', '부의' 스티커를 끌어서 알맞은 봉투에 붙이는 미니 게임 */
 export default function EnvelopeGameScreen({ label, color }) {
@@ -75,7 +74,7 @@ export default function EnvelopeGameScreen({ label, color }) {
 
   const handlePlaced = (sticker, target) => {
     setPlaced((p) => ({ ...p, [sticker.target]: sticker }));
-    setMessage({ ok: true, text: `맞아요! '${sticker.text}'${topic(sticker.text).slice(-1)} ${data.envelopes.find((e) => e.id === sticker.target).event} 봉투에 써요.` });
+    setMessage({ ok: true, text: sticker.rightHint });
     burstRef.current?.burst(target.x, target.y);
   };
 
@@ -89,9 +88,9 @@ export default function EnvelopeGameScreen({ label, color }) {
     <View style={styles.root}>
       {/* 끄는 동안 화면이 같이 움직이지 않도록, 다 맞힌 뒤에만 스크롤을 켠다 */}
       <ScrollView ref={scrollRef} scrollEnabled={done} contentContainerStyle={styles.content}>
-        {label ? <Text style={[styles.label, { color }]}>{label}</Text> : null}
-        <Text style={styles.title}>{data.title}</Text>
-        <Text style={styles.guide}>{data.guide}</Text>
+        {label ? <HintText style={[styles.label, { color }]}>{label}</HintText> : null}
+        <HintText style={styles.title}>{data.title}</HintText>
+        <HintText style={styles.guide}>{data.guide}</HintText>
 
         <View style={styles.envelopes}>
           {data.envelopes.map((env) => {
@@ -114,36 +113,40 @@ export default function EnvelopeGameScreen({ label, color }) {
                     ]}
                   >
                     {sticker ? (
-                      <Text style={styles.vertical}>{sticker.text.split('').join('\n')}</Text>
+                      <HintText hint={sticker.text} style={styles.vertical}>
+                        {sticker.text.split('').join('\n')}
+                      </HintText>
                     ) : (
-                      <Text style={styles.zoneHint}>여기에{'\n'}붙여요</Text>
+                      <HintText hint="여기에 붙여요" style={styles.zoneHint}>
+                        여기에{'\n'}붙여요
+                      </HintText>
                     )}
                   </View>
                 </View>
-                <Text style={[styles.event, { color: envColor }]}>
+                <HintText hint={env.event} style={[styles.event, { color: envColor }]}>
                   {env.emoji} {env.event}
-                </Text>
+                </HintText>
               </View>
             );
           })}
         </View>
 
         {message ? (
-          <Text style={[styles.message, { color: message.ok ? colors.lime : colors.pink }]} accessibilityLiveRegion="polite">
+          <HintText hint={message.text} style={[styles.message, { color: message.ok ? colors.lime : colors.pink }]} accessibilityLiveRegion="polite">
             {message.ok ? '✓ ' : '✕ '}
             {message.text}
-          </Text>
+          </HintText>
         ) : (
           <Text style={styles.message}> </Text>
         )}
 
         {done ? (
           <NeonCard accent={colors.lime}>
-            <Text style={styles.doneTitle}>모두 맞혔어요! 🎉</Text>
+            <HintText style={styles.doneTitle}>모두 맞혔어요! 🎉</HintText>
             {data.summary.map((s) => (
-              <Text key={s} style={styles.summary}>
+              <HintText key={s} hint={s} style={styles.summary}>
                 • {s}
-              </Text>
+              </HintText>
             ))}
             <NeonButton title="다시 하기" color={colors.lime} onPress={restart} style={styles.again} />
           </NeonCard>

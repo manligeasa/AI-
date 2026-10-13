@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import BouncyTabIcon from './BouncyTabIcon';
+import { useHint } from '../i18n/HintContext';
 import { colors, glow } from '../theme/colors';
 import { font } from '../theme/typography';
 
@@ -9,6 +10,7 @@ import { font } from '../theme/typography';
 export default function TabBar({ tabs, current, onChange }) {
   const insets = useSafeAreaInsets();
   const icons = useRef({});
+  const { show } = useHint();
 
   const handlePress = (key) => {
     icons.current[key]?.bounce();
@@ -26,6 +28,7 @@ export default function TabBar({ tabs, current, onChange }) {
             accessibilityLabel={tab.label}
             accessibilityState={{ selected: active }}
             onPress={() => handlePress(tab.key)}
+            onLongPress={(e) => show(tab.label, null, e)}
             style={styles.tab}
           >
             <BouncyTabIcon ref={(r) => (icons.current[tab.key] = r)} source={tab.icon} active={active} />

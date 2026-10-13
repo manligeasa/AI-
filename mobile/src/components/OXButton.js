@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Animated, Pressable, StyleSheet, Text } from 'react-native';
 import Svg, { Circle, G, Path } from 'react-native-svg';
+import { useHint } from '../i18n/HintContext';
 import { colors, glow } from '../theme/colors';
 import { font, radius } from '../theme/typography';
 
@@ -14,6 +15,7 @@ const MARK = {
 export default function OXButton({ mark, color, width, height, label, onPress, disabled }) {
   const markSize = Math.min(width, height) * 0.72;
   const scale = useRef(new Animated.Value(1)).current;
+  const { show } = useHint();
   const pressIn = () => Animated.spring(scale, { toValue: 0.9, useNativeDriver: true }).start();
   const pressOut = () => Animated.spring(scale, { toValue: 1, friction: 3, tension: 200, useNativeDriver: true }).start();
   const line = { fill: 'none', stroke: color, strokeLinecap: 'round' };
@@ -24,6 +26,7 @@ export default function OXButton({ mark, color, width, height, label, onPress, d
         accessibilityRole="button"
         accessibilityLabel={`${mark}, ${label}`}
         onPress={onPress}
+        onLongPress={(e) => show(label, null, e)}
         onPressIn={pressIn}
         onPressOut={pressOut}
         disabled={disabled}

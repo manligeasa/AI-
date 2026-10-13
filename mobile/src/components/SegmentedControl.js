@@ -1,9 +1,11 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useHint } from '../i18n/HintContext';
 import { colors } from '../theme/colors';
 import { font, radius } from '../theme/typography';
 
 /** 화면 위쪽에서 보기 방식을 바꾸는 큰 전환 버튼 (예: [보여 주는 카드 | 조문 순서]) */
 export default function SegmentedControl({ items, value, onChange, color }) {
+  const { show } = useHint();
   return (
     <View style={styles.segment} accessibilityRole="tablist">
       {items.map((m) => {
@@ -14,6 +16,7 @@ export default function SegmentedControl({ items, value, onChange, color }) {
             accessibilityRole="tab"
             accessibilityState={{ selected: active }}
             onPress={() => onChange(m.key)}
+            onLongPress={(e) => show(m.hint ?? m.label, null, e)}
             style={[styles.item, active && { backgroundColor: color }]}
           >
             <Text style={[styles.text, { color: active ? colors.textOnNeon : colors.textMuted }]}>{m.label}</Text>

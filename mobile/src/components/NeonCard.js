@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import HintText from './HintText';
 import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
 
@@ -6,7 +7,7 @@ import { font, radius, space } from '../theme/typography';
 export default function NeonCard({ title, accent = colors.blue, children, style }) {
   return (
     <View style={[styles.card, { borderColor: accent }, glow(accent, 10), style]}>
-      {title ? <Text style={[styles.title, { color: accent }]}>{title}</Text> : null}
+      {title ? <HintText style={[styles.title, { color: accent }]}>{title}</HintText> : null}
       {children}
     </View>
   );

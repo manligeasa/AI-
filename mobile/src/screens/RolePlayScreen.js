@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { Animated, Easing, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import HintText from '../components/HintText';
 import NeonBurst from '../components/NeonBurst';
+import { useHint } from '../i18n/HintContext';
 import NeonButton from '../components/NeonButton';
 import NeonCard from '../components/NeonCard';
 import { useRolePlay } from '../state/RolePlayContext';
@@ -8,7 +10,7 @@ import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
 
 /** 상황극 연습: 상황을 보고 알맞은 말을 고르는 선택형 게임 */
-export default function RolePlayScreen({ label, color }) {
+export default function RolePlayScreen({ color }) {
   const game = useRolePlay();
   const burstRef = useRef(null);
   const scrollRef = useRef(null);
@@ -32,8 +34,8 @@ export default function RolePlayScreen({ label, color }) {
   return (
     <View style={styles.root}>
       <ScrollView ref={scrollRef} contentContainerStyle={styles.content}>
-        <Text style={[styles.label, { color }]}>{label} 연습</Text>
-        <Text style={styles.title}>{game.title}</Text>
+        <HintText style={[styles.label, { color }]}>상황극 연습</HintText>
+        <HintText style={styles.title}>{game.title}</HintText>
         {game.finished ? <Result /> : <Question onChoose={handleChoose} />}
       </ScrollView>
       <NeonBurst ref={burstRef} />
@@ -50,17 +52,19 @@ function Question({ onChoose }) {
       <Progress index={index} total={total} score={score} answered={answered} />
 
       <NeonCard accent={colors.blue}>
-        <Text style={styles.place}>
+        <HintText hint={scenario.place} style={styles.place}>
           {scenario.emoji} {scenario.place}
-        </Text>
-        <Text style={styles.situation}>{scenario.situation}</Text>
+        </HintText>
+        <HintText style={styles.situation}>{scenario.situation}</HintText>
         <View style={styles.bubble}>
-          <Text style={styles.speaker}>{scenario.speaker}</Text>
-          <Text style={styles.line}>“{scenario.line}”</Text>
+          <HintText style={styles.speaker}>{scenario.speaker}</HintText>
+          <HintText hint={scenario.line} style={styles.line}>
+            “{scenario.line}”
+          </HintText>
         </View>
       </NeonCard>
 
-      <Text style={styles.ask}>뭐라고 말할까요?</Text>
+      <HintText style={styles.ask}>뭐라고 말할까요?</HintText>
       {scenario.choices.map((choice, i) => (
         <Choice
           key={`${scenario.id}-${i}`}
@@ -84,10 +88,12 @@ function Progress({ index, total, score, answered }) {
   return (
     <View style={styles.progressWrap}>
       <View style={styles.progressText}>
-        <Text style={styles.progressLabel}>
+        <HintText hint="{n} / {total} 번째 상황" params={{ n: index + 1, total }} style={styles.progressLabel}>
           {index + 1} / {total} 번째 상황
-        </Text>
-        <Text style={[styles.progressLabel, { color: colors.lime }]}>⭐ {score}점</Text>
+        </HintText>
+        <HintText hint="⭐ {score}점" params={{ score }} style={[styles.progressLabel, { color: colors.lime }]}>
+          ⭐ {score}점
+        </HintText>
       </View>
       <View style={styles.track}>
         <View style={[styles.bar, { width: `${(done / total) * 100}%` }, glow(colors.pink, 8)]} />
@@ -124,14 +130,15 @@ function Choice({ text, state, onPress }) {
     dim: { borderColor: colors.border, backgroundColor: colors.surface, color: colors.textMuted, opacity: 0.5 },
   }[state];
   const mark = { correct: '✓ ', wrong: '✕ ' }[state] ?? '';
+  const { show } = useHint();
 
   return (
     <Animated.View style={{ transform: [{ translateX }, { scale: pop }] }}>
       <Pressable
         accessibilityRole="button"
         accessibilityState={{ disabled: state !== 'idle' }}
-        onPress={onPress}
-        disabled={state !== 'idle'}
+        onPress={state === 'idle' ? onPress : undefined}
+        onLongPress={(e) => show(text, null, e)}
         style={({ pressed }) => [styles.choice, look, pressed && styles.pressed]}
       >
         <Text style={[styles.choiceText, { color: look.color }]}>
@@ -155,8 +162,8 @@ function Feedback({ correct, text, children }) {
   return (
     <Animated.View style={{ opacity: enter, transform: [{ translateY }] }}>
       <NeonCard accent={color}>
-        <Text style={[styles.feedbackTitle, { color }]}>{correct ? '정답이에요! 🎉' : '아쉬워요!'}</Text>
-        <Text style={styles.feedbackText}>{text}</Text>
+        <HintText style={[styles.feedbackTitle, { color }]}>{correct ? '정답이에요! 🎉' : '아쉬워요!'}</HintText>
+        <HintText style={styles.feedbackText}>{text}</HintText>
         {children}
       </NeonCard>
     </Animated.View>
@@ -174,8 +181,10 @@ function Result() {
       <Text style={styles.resultScore}>
         {score} <Text style={styles.resultTotal}>/ {total}</Text>
       </Text>
-      <Text style={styles.resultMessage}>{message}</Text>
-      <Text style={styles.best}>내 최고 기록: {bestScore}점</Text>
+      <HintText style={styles.resultMessage}>{message}</HintText>
+      <HintText hint="내 최고 기록: {n}점" params={{ n: bestScore }} style={styles.best}>
+        내 최고 기록: {bestScore}점
+      </HintText>
       <NeonButton title="다시 하기" color={colors.pink} onPress={restart} style={styles.restart} />
     </NeonCard>
   );

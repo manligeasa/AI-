@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import HintText from '../components/HintText';
 import NeonButton from '../components/NeonButton';
 import NeonCheckbox from '../components/NeonCheckbox';
 import data from '../data/cards/situations.json';
@@ -24,23 +25,23 @@ export default function SituationCardScreen() {
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <Text style={styles.subtitle}>{data.subtitle}</Text>
+      <HintText style={styles.subtitle}>{data.subtitle}</HintText>
 
       <View style={[styles.preview, messages.length > 0 && styles.previewOn]} accessibilityLiveRegion="polite">
         {messages.length === 0 ? (
-          <Text style={styles.empty}>아래에서 내 상황을 골라 주세요</Text>
+          <HintText style={styles.empty}>아래에서 내 상황을 골라 주세요</HintText>
         ) : (
           messages.map((m) => (
-            <Text key={m} style={[styles.previewText, neonText]}>
+            <HintText key={m} style={[styles.previewText, neonText]}>
               {m}
-            </Text>
+            </HintText>
           ))
         )}
       </View>
 
       <NeonButton title="📱 화면 가득 크게 보여 주기" color={SHOW_COLOR} disabled={messages.length === 0} onPress={() => setFullScreen(true)} />
 
-      <Text style={styles.heading}>내 상황 고르기 (여러 개 골라도 돼요)</Text>
+      <HintText style={styles.heading}>내 상황 고르기 (여러 개 골라도 돼요)</HintText>
       <View style={styles.list}>
         {data.situations.map((s) => (
           <NeonCheckbox key={s.id} label={s.label} emoji={s.emoji} checked={checked.includes(s.id)} onToggle={() => toggle(s.id)} />

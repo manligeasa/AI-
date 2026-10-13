@@ -1,13 +1,15 @@
 import { Pressable, StyleSheet, Text } from 'react-native';
+import { useHint } from '../i18n/HintContext';
 import { colors } from '../theme/colors';
 import { font, radius } from '../theme/typography';
 
 /** 작은 알약 모양 버튼 (예시 질문, 기준 표시 등) */
-export default function Chip({ label, color = colors.lime, active = true, onPress }) {
+export default function Chip({ label, hint, color = colors.lime, active = true, onPress }) {
+  const { show } = useHint();
   return (
     <Pressable
       onPress={onPress}
-      disabled={!onPress}
+      onLongPress={(e) => show(hint ?? label, null, e)}
       accessibilityRole={onPress ? 'button' : 'text'}
       style={({ pressed }) => [
         styles.chip,

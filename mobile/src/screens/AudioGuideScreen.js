@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import * as Speech from 'expo-speech';
+import HintText from '../components/HintText';
 import NeonPulse from '../components/NeonPulse';
+import { useHint } from '../i18n/HintContext';
 import Chip from '../components/Chip';
 import NeonCard from '../components/NeonCard';
 import data from '../data/audio/phrases.json';
@@ -9,6 +11,7 @@ import { colors, glow } from '../theme/colors';
 import { font, space } from '../theme/typography';
 
 const BUTTON = 150;
+const NO_VOICE_NOTICE = '이 휴대폰에 한국어 음성이 없어요. 휴대폰 설정 → ‘텍스트 음성 변환(TTS)’에서 한국어를 내려받아 주세요.';
 const SPEEDS = [
   { label: '🐢 천천히', rate: 0.75 },
   { label: '보통 빠르기', rate: 1.0 },
@@ -23,6 +26,7 @@ export default function AudioGuideScreen({ label, color }) {
   const [rate, setRate] = useState(SPEEDS[0].rate);
   const [noKoreanVoice, setNoKoreanVoice] = useState(false);
   const mounted = useRef(true);
+  const { show } = useHint();
 
   // 휴대폰에 한국어 음성이 있는지 확인한다 (없으면 설정 방법을 안내)
   useEffect(() => {
@@ -61,13 +65,15 @@ export default function AudioGuideScreen({ label, color }) {
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
-      <Text style={[styles.label, { color }]}>{label}</Text>
-      <Text style={styles.title}>{data.title}</Text>
-      <Text style={styles.subtitle}>{data.subtitle}</Text>
+      <HintText style={[styles.label, { color }]}>{label}</HintText>
+      <HintText style={styles.title}>{data.title}</HintText>
+      <HintText style={styles.subtitle}>{data.subtitle}</HintText>
 
       <NeonCard accent={color} style={styles.card}>
-        <Text style={styles.situation}>{data.phrase.situation}</Text>
-        <Text style={[styles.phrase, speaking && { color }]}>“{data.phrase.text}”</Text>
+        <HintText style={styles.situation}>{data.phrase.situation}</HintText>
+        <HintText hint={data.phrase.text} style={[styles.phrase, speaking && { color }]}>
+          “{data.phrase.text}”
+        </HintText>
 
         <View style={styles.stage}>
           <NeonPulse active={speaking} color={color} size={BUTTON} />
@@ -75,6 +81,7 @@ export default function AudioGuideScreen({ label, color }) {
             accessibilityRole="button"
             accessibilityLabel={speaking ? '읽기 멈추기' : `"${data.phrase.text}" 듣기`}
             onPress={handlePress}
+            onLongPress={(e) => show(speaking ? '멈추기' : '듣기', null, e)}
             style={({ pressed }) => [
               styles.play,
               { borderColor: color, backgroundColor: speaking ? color : colors.surface },
@@ -95,11 +102,11 @@ export default function AudioGuideScreen({ label, color }) {
       </NeonCard>
 
       {noKoreanVoice ? (
-        <Text style={styles.notice}>
-          ⚠️ 이 휴대폰에 한국어 음성이 없어요. 휴대폰 설정 → ‘텍스트 음성 변환(TTS)’에서 한국어를 내려받아 주세요.
-        </Text>
+        <HintText hint={NO_VOICE_NOTICE} style={styles.notice}>
+          ⚠️ {NO_VOICE_NOTICE}
+        </HintText>
       ) : null}
-      <Text style={styles.hint}>소리가 안 들리면 휴대폰 소리 크기와 무음 모드를 확인해 주세요.</Text>
+      <HintText style={styles.hint}>소리가 안 들리면 휴대폰 소리 크기와 무음 모드를 확인해 주세요.</HintText>
     </ScrollView>
   );
 }

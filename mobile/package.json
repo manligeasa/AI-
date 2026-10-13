@@ -23,7 +23,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "export:check": "expo export --platform android --output-dir dist",
-    "icons": "node scripts/make-tab-icons.mjs"
+    "icons": "node scripts/make-tab-icons.mjs",
+    "check:i18n": "node scripts/check-translations.mjs"
   },
   "private": true
 }

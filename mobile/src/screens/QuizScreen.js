@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import EnvelopeGameScreen from './EnvelopeGameScreen';
 import OXQuizScreen from './OXQuizScreen';
+import HintText from '../components/HintText';
 import SegmentedControl from '../components/SegmentedControl';
 import { font, space } from '../theme/typography';
 
@@ -17,7 +18,7 @@ export default function QuizScreen({ label, color }) {
   return (
     <View style={styles.root}>
       <View style={styles.header}>
-        <Text style={[styles.label, { color }]}>{label}</Text>
+        <HintText style={[styles.label, { color }]}>{label}</HintText>
         <SegmentedControl items={MODES} value={mode} onChange={setMode} color={color} />
       </View>
       <View style={styles.root}>{mode === 'ox' ? <OXQuizScreen /> : <EnvelopeGameScreen />}</View>

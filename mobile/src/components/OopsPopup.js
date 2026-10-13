@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
+import { Animated, Easing, StyleSheet, View } from 'react-native';
+import HintText from './HintText';
 import NeonButton from './NeonButton';
+import { fill } from '../i18n/translate';
 import { colors, glow } from '../theme/colors';
 import { font, radius, space } from '../theme/typography';
 
@@ -8,7 +10,8 @@ import { font, radius, space } from '../theme/typography';
  * 오답·시간 초과 때 뜨는 귀여운 팝업.
  * 나타날 때 '뿅' 커지며 좌우로 흔들리고, 열려 있는 동안 이모지가 살랑살랑 흔들린다.
  */
-export default function OopsPopup({ visible, emoji = '🙈', title, text, buttonTitle, onClose }) {
+/** note: 설명 앞에 붙는 한 줄 (예: { hint: '정답은 {answer}예요.', params: { answer: 'O' } }) */
+export default function OopsPopup({ visible, emoji = '🙈', title, note, text, buttonTitle, onClose }) {
   const enter = useRef(new Animated.Value(0)).current;
   const shake = useRef(new Animated.Value(0)).current;
   const wiggle = useRef(new Animated.Value(0)).current;
@@ -45,10 +48,15 @@ export default function OopsPopup({ visible, emoji = '🙈', title, text, button
     <Animated.View style={[styles.backdrop, { opacity: enter }]} accessibilityViewIsModal>
       <Animated.View style={[styles.card, glow(colors.pink, 26), { transform: [{ translateX }, { rotate }, { scale }] }]}>
         <Animated.Text style={[styles.emoji, { transform: [{ rotate: emojiRotate }] }]}>{emoji}</Animated.Text>
-        <Text style={styles.title} accessibilityLiveRegion="assertive">
+        <HintText style={styles.title} accessibilityLiveRegion="assertive">
           {title}
-        </Text>
-        {text ? <Text style={styles.text}>{text}</Text> : null}
+        </HintText>
+        {note ? (
+          <HintText hint={note.hint} params={note.params} style={styles.note}>
+            {fill(note.hint, note.params)}
+          </HintText>
+        ) : null}
+        {text ? <HintText style={styles.text}>{text}</HintText> : null}
         <View style={styles.button}>
           <NeonButton title={buttonTitle} color={colors.pink} onPress={onClose} />
         </View>
@@ -79,6 +87,7 @@ const styles = StyleSheet.create({
   },
   emoji: { fontSize: 64 },
   title: { fontSize: 24, fontWeight: '900', color: colors.pink, textAlign: 'center', lineHeight: 33 },
+  note: { fontSize: font.body, fontWeight: '900', color: colors.lime, textAlign: 'center' },
   text: { fontSize: font.body, color: colors.text, textAlign: 'center', lineHeight: 27 },
   button: { alignSelf: 'stretch', marginTop: space.sm },
 });
