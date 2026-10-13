@@ -91,6 +91,10 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 - 넘김 효과: `src/components/CardSwiper.js`. 옆 카드는 작아지고 흐려지며, 그림은 글자보다 늦게 따라와 깊이감이 생긴다. 휴대폰의 네이티브 애니메이션(useNativeDriver)으로 처리해 부드럽다.
 - 새 카드 묶음을 만들려면 같은 모양의 JSON 파일을 추가하고 `src/tabs.js`의 `deck`에 연결한다.
 
+## 앱 아이콘
+
+- 네온 말풍선 + '톡톡' 글자. 원본: `assets/icon-source.svg`. 시작 화면은 어두운 바탕(#0A0A12)에 같은 그림을 띄운다(`app.json`의 expo-splash-screen 설정).
+
 ## 확인·출시
 
 휴대폰에서 확인하는 법과 스토어 출시 순서: [docs/모바일-앱-확인-및-출시.md](../docs/모바일-앱-확인-및-출시.md)
