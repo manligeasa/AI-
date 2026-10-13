@@ -3,6 +3,7 @@ import condolenceDeck from './data/cards/condolence.json';
 import RolePlayScreen from './screens/RolePlayScreen';
 import AudioGuideScreen from './screens/AudioGuideScreen';
 import CommunicationScreen from './screens/CommunicationScreen';
+import EnvelopeGameScreen from './screens/EnvelopeGameScreen';
 
 /**
  * 하단 탭 4개. 순서·이름·색·아이콘·소개 문구를 여기서 한 번에 관리한다.
@@ -29,8 +30,7 @@ export const TABS = [
     label: '퀴즈',
     color: colors.lime,
     icon: require('./assets/lottie/quiz.json'),
-    description: '쉬운 OX 퀴즈로 디지털 상식을 다져요.',
-    features: ['하루 5문제 AI·디지털 리터러시 퀴즈', '틀린 문제는 쉬운 해설과 함께 다시 풀기', '맞힌 개수와 연속 학습 일수 기록'],
+    Screen: EnvelopeGameScreen,
   },
   {
     key: 'cards',

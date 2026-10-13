@@ -20,6 +20,15 @@ npm start          # QR 코드가 뜨면 휴대폰의 Expo Go 앱으로 찍는�
 npm run web        # 컴퓨터 브라우저로 미리 보기
 ```
 
+## 퀴즈: 봉투 이름표 붙이기 (드래그 앤 드롭)
+
+- 결혼식·장례식 봉투(네온 라인아트) 두 장과 '축결혼', '부의' 글자 스티커가 나온다. 스티커를 손가락으로 끌어 알맞은 봉투의 점선 칸에 놓는다.
+- 맞는 봉투에 놓으면 스티커가 칸 가운데로 쏙 들어가 세로 글씨로 붙고, 그 자리에서 네온 파티클이 터진다.
+- 틀린 봉투나 빈 곳에 놓으면 제자리로 통통 튀며 돌아가고, 왜 틀렸는지 쉬운 설명이 나온다.
+- 끄는 중에 봉투 위로 가면 칸이 라임색으로 빛나 '여기에 놓으면 된다'를 알려 준다. 칸보다 조금 밖에 놓아도 붙도록 여유를 두었다.
+- 추가 설치 없이 React Native 기본 기능(PanResponder)으로 만들어 Expo Go에서 바로 동작한다: `src/components/DraggableSticker.js`, `src/screens/EnvelopeGameScreen.js`
+- 봉투·스티커·설명 문구: `src/data/quiz/envelopes.json`
+
 ## 오디오 가이드: 무료 음성 읽기(TTS)
 
 - 휴대폰에 기본으로 들어 있는 음성 읽기 기능(expo-speech)을 쓴다. 유료 클라우드 음성 서비스나 인터넷이 필요 없다.
@@ -60,6 +69,7 @@ npm run web        # 컴퓨터 브라우저로 미리 보기
 | 예시 질문 | `src/data/exampleQuestions.json` | 앱에 함께 들어가는 읽기 전용 JSON |
 | 소통 카드 | `src/data/cards/*.json` | 조문 순서 카드·상황별 문장 (읽기 전용 JSON) |
 | 기본값 | `src/data/seed.json` | 처음 실행할 때 쓰는 빈 데이터 모양 |
+| 봉투 퀴즈 | `src/data/quiz/envelopes.json` | 봉투·스티커·설명 (읽기 전용 JSON) |
 | 오디오 문장 | `src/data/audio/phrases.json` | 읽어 줄 문장 (읽기 전용 JSON) |
 | 상황극 문제 | `src/data/roleplay/scenarios.json` | 상황·선택지 (읽기 전용 JSON) |
 | 보관함·상황극 최고 점수 | 휴대폰 문서 폴더의 `ai-coach-data.json` | 앱이 읽고 쓰는 JSON 파일 |
@@ -81,7 +91,7 @@ mobile/
    ├─ theme/                색상표(colors.js)·글자 크기(typography.js)
    ├─ components/           네온 버튼·카드·칩·점수 배지·탭 바·튀는 아이콘
    ├─ state/                RolePlayContext(상황극 게임 상태, Context API)
-   ├─ screens/              CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
+   ├─ screens/              EnvelopeGameScreen(봉투 퀴즈), CommunicationScreen(소통 카드: 보여 주는 카드 + 조문 순서), SituationCardScreen(보여 주는 카드), AudioGuideScreen(오디오 가이드), RolePlayScreen(상황극 게임), CardDeckScreen(스와이프 카드), TabScreen(탭 기본 틀), CoachScreen·HistoryScreen(이전 질문 코치 화면, 현재 탭에서 빠짐)
    ├─ services/coach.js     웹앱 규칙 엔진(../src/services)을 그대로 호출
    ├─ storage/              로컬 JSON 저장소와 화면용 훅
    └─ data/                 앱에 포함되는 JSON 파일
