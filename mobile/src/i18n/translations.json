@@ -1,0 +1,1037 @@
+{
+  "상황극": {
+    "vi": "Đóng vai tình huống",
+    "zh": "情景剧",
+    "fil": "Role-play"
+  },
+  "오디오": {
+    "vi": "Âm thanh",
+    "zh": "音频",
+    "fil": "Audio"
+  },
+  "퀴즈": {
+    "vi": "Câu đố",
+    "zh": "测验",
+    "fil": "Pagsusulit"
+  },
+  "소통 카드": {
+    "vi": "Thẻ giao tiếp",
+    "zh": "沟通卡片",
+    "fil": "Mga card sa pakikipag-usap"
+  },
+  "← 이전": {
+    "vi": "← Trước",
+    "zh": "← 上一个",
+    "fil": "← Bumalik"
+  },
+  "다음 →": {
+    "vi": "Tiếp →",
+    "zh": "下一个 →",
+    "fil": "Susunod →"
+  },
+  "처음으로": {
+    "vi": "Về đầu",
+    "zh": "回到开头",
+    "fil": "Bumalik sa simula"
+  },
+  "다시 하기": {
+    "vi": "Làm lại",
+    "zh": "再来一次",
+    "fil": "Ulitin"
+  },
+  "다시 도전하기": {
+    "vi": "Thử lại",
+    "zh": "再挑战一次",
+    "fil": "Subukang muli"
+  },
+  "시작하기": {
+    "vi": "Bắt đầu",
+    "zh": "开始",
+    "fil": "Magsimula"
+  },
+  "결과 보기": {
+    "vi": "Xem kết quả",
+    "zh": "查看结果",
+    "fil": "Tingnan ang resulta"
+  },
+  "결과 보기 🎉": {
+    "vi": "Xem kết quả 🎉",
+    "zh": "查看结果 🎉",
+    "fil": "Tingnan ang resulta 🎉"
+  },
+  "맞아요": {
+    "vi": "Đúng",
+    "zh": "对",
+    "fil": "Tama"
+  },
+  "아니에요": {
+    "vi": "Sai",
+    "zh": "不对",
+    "fil": "Mali"
+  },
+  "정답이에요! 🎉": {
+    "vi": "Đúng rồi! 🎉",
+    "zh": "答对了！🎉",
+    "fil": "Tama! 🎉"
+  },
+  "정답이에요! 🎉 +1": {
+    "vi": "Đúng rồi! 🎉 +1",
+    "zh": "答对了！🎉 +1",
+    "fil": "Tama! 🎉 +1"
+  },
+  "아쉬워요!": {
+    "vi": "Tiếc quá!",
+    "zh": "真可惜！",
+    "fil": "Sayang!"
+  },
+  "⭐ {score}점": {
+    "vi": "⭐ {score} điểm",
+    "zh": "⭐ {score} 分",
+    "fil": "⭐ {score} puntos"
+  },
+  "문제 {n} / {total}": {
+    "vi": "Câu {n} / {total}",
+    "zh": "第 {n} / {total} 题",
+    "fil": "Tanong {n} / {total}"
+  },
+  "{n} / {total} 번째 상황": {
+    "vi": "Tình huống {n} / {total}",
+    "zh": "第 {n} / {total} 个情景",
+    "fil": "Sitwasyon {n} / {total}"
+  },
+  "내 최고 기록: {n}점": {
+    "vi": "Kỷ lục cao nhất của tôi: {n} điểm",
+    "zh": "我的最高纪录：{n} 分",
+    "fil": "Pinakamataas kong iskor: {n} puntos"
+  },
+  "내 최고 기록: {n} / {total}": {
+    "vi": "Kỷ lục cao nhất của tôi: {n} / {total}",
+    "zh": "我的最高纪录：{n} / {total}",
+    "fil": "Pinakamataas kong iskor: {n} / {total}"
+  },
+  "정답은 {answer}예요.": {
+    "vi": "Đáp án đúng là {answer}.",
+    "zh": "正确答案是 {answer}。",
+    "fil": "Ang tamang sagot ay {answer}."
+  },
+  "상황극 연습": {
+    "vi": "Luyện tập đóng vai",
+    "zh": "情景剧练习",
+    "fil": "Pagsasanay sa role-play"
+  },
+  "생활 속 상황극": {
+    "vi": "Đóng vai tình huống đời thường",
+    "zh": "生活中的情景剧",
+    "fil": "Role-play sa pang-araw-araw na buhay"
+  },
+  "뭐라고 말할까요?": {
+    "vi": "Nên nói gì đây?",
+    "zh": "该说什么呢？",
+    "fil": "Ano ang dapat sabihin?"
+  },
+  "다음 상황 →": {
+    "vi": "Tình huống tiếp theo →",
+    "zh": "下一个情景 →",
+    "fil": "Susunod na sitwasyon →"
+  },
+  "완벽해요! 상황극 달인이에요.": {
+    "vi": "Hoàn hảo! Bạn là cao thủ đóng vai.",
+    "zh": "太完美了！您是情景剧达人。",
+    "fil": "Perpekto! Eksperto ka sa role-play."
+  },
+  "잘했어요! 조금만 더 연습해요.": {
+    "vi": "Giỏi lắm! Luyện thêm một chút nữa nhé.",
+    "zh": "做得好！再多练习一下吧。",
+    "fil": "Magaling! Magsanay pa nang kaunti."
+  },
+  "괜찮아요. 다시 하면 더 잘할 수 있어요.": {
+    "vi": "Không sao. Làm lại sẽ tốt hơn.",
+    "zh": "没关系，再来一次会更好。",
+    "fil": "Okay lang. Mas gagaling ka kapag inulit mo."
+  },
+  "장례식장": {
+    "vi": "Nhà tang lễ",
+    "zh": "殡仪馆",
+    "fil": "Punerarya"
+  },
+  "절을 마쳤어요. 상주가 인사해요.": {
+    "vi": "Bạn đã lạy xong. Tang chủ chào bạn.",
+    "zh": "您行完礼了，丧主向您致意。",
+    "fil": "Tapos ka nang yumukod. Bumabati sa iyo ang pangunahing kapamilya ng yumao."
+  },
+  "상주": {
+    "vi": "Tang chủ (người đứng đầu tang lễ)",
+    "zh": "丧主（主要家属）",
+    "fil": "Pangunahing kapamilya ng yumao"
+  },
+  "와 주셔서 감사합니다.": {
+    "vi": "Cảm ơn anh/chị đã đến.",
+    "zh": "谢谢您前来。",
+    "fil": "Salamat po sa pagpunta."
+  },
+  "오랜만이에요! 잘 지냈어요?": {
+    "vi": "Lâu quá không gặp! Dạo này khỏe không?",
+    "zh": "好久不见！过得好吗？",
+    "fil": "Matagal tayong hindi nagkita! Kumusta ka?"
+  },
+  "반가워도 장례식장에서는 밝은 인사를 하지 않아요.": {
+    "vi": "Dù vui khi gặp lại, ở nhà tang lễ không chào hỏi vui vẻ.",
+    "zh": "即使见面很高兴，在丧礼上也不要热情地打招呼。",
+    "fil": "Kahit natutuwa kang makita sila, hindi masiglang bumabati sa lamay."
+  },
+  "얼마나 상심이 크세요.": {
+    "vi": "Chắc anh/chị đau buồn lắm.",
+    "zh": "您一定非常伤心。",
+    "fil": "Alam kong labis ang inyong pighati."
+  },
+  "좋아요! 짧고 조용한 위로가 가장 좋아요.": {
+    "vi": "Tốt lắm! Lời an ủi ngắn gọn và nhẹ nhàng là tốt nhất.",
+    "zh": "很好！简短安静的安慰最合适。",
+    "fil": "Mahusay! Pinakamainam ang maikli at tahimik na pakikiramay."
+  },
+  "식사는 어디에서 해요?": {
+    "vi": "Ăn cơm ở đâu vậy?",
+    "zh": "在哪里吃饭？",
+    "fil": "Saan po kumakain?"
+  },
+  "먼저 위로의 말을 해요. 식사는 나중에 물어봐요.": {
+    "vi": "Hãy nói lời an ủi trước. Chuyện ăn uống hỏi sau.",
+    "zh": "先说安慰的话，吃饭的事以后再问。",
+    "fil": "Unahin ang pakikiramay. Saka na itanong ang tungkol sa pagkain."
+  },
+  "병원 접수처": {
+    "vi": "Quầy tiếp nhận bệnh viện",
+    "zh": "医院挂号处",
+    "fil": "Reception ng ospital"
+  },
+  "병원에 처음 왔어요. 간호사가 물어요.": {
+    "vi": "Lần đầu đến bệnh viện. Y tá hỏi bạn.",
+    "zh": "第一次来医院，护士问您。",
+    "fil": "Unang beses mo sa ospital. Nagtanong ang nars."
+  },
+  "간호사": {
+    "vi": "Y tá",
+    "zh": "护士",
+    "fil": "Nars"
+  },
+  "어떻게 오셨어요?": {
+    "vi": "Anh/chị đến vì việc gì ạ?",
+    "zh": "您是因为什么来的？",
+    "fil": "Ano po ang sadya ninyo?"
+  },
+  "버스 타고 왔어요.": {
+    "vi": "Tôi đi xe buýt đến.",
+    "zh": "我坐公交车来的。",
+    "fil": "Sumakay po ako ng bus."
+  },
+  "여기서 '어떻게 오셨어요?'는 '왜 오셨어요?'라는 뜻이에요.": {
+    "vi": "Ở đây, '어떻게 오셨어요?' có nghĩa là 'Anh/chị đến vì việc gì?'.",
+    "zh": "这里的“어떻게 오셨어요?”意思是“您为什么来？”。",
+    "fil": "Dito, ang '어떻게 오셨어요?' ay nangangahulugang 'Bakit po kayo pumunta?'."
+  },
+  "그냥 왔어요.": {
+    "vi": "Tôi chỉ đến thôi.",
+    "zh": "我就是来了。",
+    "fil": "Pumunta lang po ako."
+  },
+  "아픈 곳을 말해야 알맞은 진료를 받을 수 있어요.": {
+    "vi": "Phải nói chỗ đau thì mới được khám đúng.",
+    "zh": "要说出哪里不舒服，才能得到合适的诊疗。",
+    "fil": "Kailangang sabihin kung saan masakit para tama ang gamutan."
+  },
+  "무릎이 아파서 왔어요. 처음이에요.": {
+    "vi": "Tôi bị đau đầu gối. Đây là lần đầu tôi đến.",
+    "zh": "我膝盖疼，第一次来。",
+    "fil": "Masakit po ang tuhod ko. Unang beses ko po rito."
+  },
+  "정확해요! 아픈 곳과 처음 온 것을 함께 말했어요.": {
+    "vi": "Chính xác! Bạn đã nói cả chỗ đau và việc đến lần đầu.",
+    "zh": "完全正确！您同时说了哪里疼和第一次来。",
+    "fil": "Tama! Nasabi mo kung saan masakit at na unang beses mo."
+  },
+  "카페": {
+    "vi": "Quán cà phê",
+    "zh": "咖啡店",
+    "fil": "Kapihan"
+  },
+  "키오스크(무인 주문기)로 주문하기가 어려워요.": {
+    "vi": "Gọi món bằng kiosk (máy gọi món tự động) khó quá.",
+    "zh": "用自助点餐机点餐很难。",
+    "fil": "Mahirap mag-order sa kiosk (makinang pang-order)."
+  },
+  "직원": {
+    "vi": "Nhân viên",
+    "zh": "店员",
+    "fil": "Empleyado"
+  },
+  "(바쁘게 커피를 만들고 있어요)": {
+    "vi": "(Đang bận pha cà phê)",
+    "zh": "（正忙着做咖啡）",
+    "fil": "(Abala sa paggawa ng kape)"
+  },
+  "죄송한데, 주문 좀 도와주실 수 있어요?": {
+    "vi": "Xin lỗi, anh/chị giúp tôi gọi món được không?",
+    "zh": "不好意思，能帮我点一下餐吗？",
+    "fil": "Pasensya na po, matutulungan n'yo po ba akong mag-order?"
+  },
+  "훌륭해요! 정중하게 도움을 청하면 대부분 기꺼이 도와줘요.": {
+    "vi": "Tuyệt vời! Nhờ giúp lịch sự thì hầu hết mọi người sẽ vui lòng giúp.",
+    "zh": "很棒！礼貌地请求帮助，大多数人都会乐意帮忙。",
+    "fil": "Napakahusay! Kapag magalang kang humingi ng tulong, kadalasan ay masaya silang tumutulong."
+  },
+  "이거 왜 이렇게 어려워요!": {
+    "vi": "Sao cái này khó thế!",
+    "zh": "这个怎么这么难！",
+    "fil": "Bakit ang hirap nito!"
+  },
+  "답답해도 화를 내면 서로 기분이 상해요.": {
+    "vi": "Dù bực bội, nếu nổi giận thì cả hai đều khó chịu.",
+    "zh": "即使着急，发脾气也会让彼此不愉快。",
+    "fil": "Kahit naiinis ka, kapag nagalit ka ay pareho kayong masasaktan."
+  },
+  "(말없이 그냥 나간다)": {
+    "vi": "(Lặng lẽ bỏ đi)",
+    "zh": "（一句话不说就走了）",
+    "fil": "(Umalis nang walang sinasabi)"
+  },
+  "도움을 청하는 것은 부끄러운 일이 아니에요.": {
+    "vi": "Nhờ giúp đỡ không phải là điều đáng xấu hổ.",
+    "zh": "请求帮助并不丢人。",
+    "fil": "Hindi nakakahiya ang humingi ng tulong."
+  },
+  "결혼식장": {
+    "vi": "Tiệc cưới",
+    "zh": "婚礼会场",
+    "fil": "Kasalan"
+  },
+  "친구 아들의 결혼식이에요. 친구를 만났어요.": {
+    "vi": "Đám cưới con trai của bạn. Bạn gặp người bạn ấy.",
+    "zh": "是朋友儿子的婚礼，您见到了朋友。",
+    "fil": "Kasal ng anak na lalaki ng kaibigan mo. Nakita mo ang kaibigan mo."
+  },
+  "친구": {
+    "vi": "Bạn bè",
+    "zh": "朋友",
+    "fil": "Kaibigan"
+  },
+  "바쁜데 와 줘서 고마워!": {
+    "vi": "Bận vậy mà vẫn đến, cảm ơn nhé!",
+    "zh": "这么忙还来，谢谢你！",
+    "fil": "Salamat sa pagpunta kahit abala ka!"
+  },
+  "삼가 고인의 명복을 빕니다.": {
+    "vi": "Xin thành kính chia buồn, cầu chúc người đã khuất yên nghỉ.",
+    "zh": "谨向逝者致以深切哀悼。",
+    "fil": "Taos-pusong pakikiramay; nawa'y mapayapa ang yumao."
+  },
+  "이 말은 장례식장에서 하는 말이에요.": {
+    "vi": "Câu này dùng ở đám tang.",
+    "zh": "这句话是在丧礼上说的。",
+    "fil": "Ang sinabing ito ay para sa lamay."
+  },
+  "축하해! 정말 기쁘겠다.": {
+    "vi": "Chúc mừng nhé! Chắc vui lắm.",
+    "zh": "恭喜！你一定很高兴吧。",
+    "fil": "Binabati kita! Siguradong masaya ka."
+  },
+  "딱 맞아요! 기쁜 날에는 밝게 축하해요.": {
+    "vi": "Chính xác! Ngày vui thì chúc mừng thật tươi vui.",
+    "zh": "完全正确！喜庆的日子要开心地祝贺。",
+    "fil": "Tama! Sa masayang araw, masiglang bumati."
+  },
+  "축의금은 얼마 내야 해?": {
+    "vi": "Tiền mừng cưới nên đưa bao nhiêu?",
+    "zh": "礼金要给多少？",
+    "fil": "Magkano ang dapat kong iregalong pera?"
+  },
+  "돈 이야기는 그 자리에서 묻지 않는 게 좋아요.": {
+    "vi": "Không nên hỏi chuyện tiền bạc ngay lúc đó.",
+    "zh": "最好不要在现场问钱的事。",
+    "fil": "Mas mabuting huwag itanong ang tungkol sa pera sa mismong okasyon."
+  },
+  "휴대폰 문자": {
+    "vi": "Tin nhắn điện thoại",
+    "zh": "手机短信",
+    "fil": "Text sa cellphone"
+  },
+  "모르는 번호로 문자가 왔어요.": {
+    "vi": "Có tin nhắn từ số lạ.",
+    "zh": "收到了陌生号码的短信。",
+    "fil": "May text mula sa hindi kilalang numero."
+  },
+  "문자": {
+    "vi": "Tin nhắn",
+    "zh": "短信",
+    "fil": "Text"
+  },
+  "엄마, 폰 고장 났어. 이 번호로 돈 좀 보내 줘.": {
+    "vi": "Mẹ ơi, điện thoại con hỏng rồi. Gửi tiền cho con vào số này nhé.",
+    "zh": "妈，我手机坏了。往这个号码给我转点钱。",
+    "fil": "Ma, sira ang cellphone ko. Padalhan mo ako ng pera sa numerong ito."
+  },
+  "얼마 필요해? 바로 보낼게.": {
+    "vi": "Cần bao nhiêu? Mẹ gửi ngay.",
+    "zh": "要多少？我马上转。",
+    "fil": "Magkano ang kailangan mo? Ipapadala ko agad."
+  },
+  "자녀를 사칭하는 문자 사기일 수 있어요. 바로 보내면 안 돼요.": {
+    "vi": "Có thể là lừa đảo giả danh con cái. Đừng gửi tiền ngay.",
+    "zh": "这可能是冒充子女的短信诈骗，不要马上转账。",
+    "fil": "Maaaring scam ito na nagpapanggap na anak mo. Huwag agad magpadala."
+  },
+  "문자 속 링크를 눌러 본다.": {
+    "vi": "Bấm thử vào đường link trong tin nhắn.",
+    "zh": "点一下短信里的链接。",
+    "fil": "Pindutin ang link sa text."
+  },
+  "모르는 링크는 누르지 않아요. 휴대폰 정보가 빠져나갈 수 있어요.": {
+    "vi": "Không bấm vào link lạ. Thông tin trong điện thoại có thể bị đánh cắp.",
+    "zh": "不要点陌生链接，手机信息可能会被盗。",
+    "fil": "Huwag pindutin ang hindi kilalang link. Maaaring manakaw ang impormasyon sa cellphone mo."
+  },
+  "원래 번호로 전화해서 확인할게.": {
+    "vi": "Mẹ sẽ gọi vào số cũ để kiểm tra.",
+    "zh": "我打原来的号码确认一下。",
+    "fil": "Tatawag ako sa dati mong numero para makasiguro."
+  },
+  "최고예요! 돈 이야기는 꼭 전화로 직접 확인해요.": {
+    "vi": "Tuyệt nhất! Chuyện tiền bạc nhất định phải gọi điện xác nhận trực tiếp.",
+    "zh": "太棒了！涉及钱的事一定要打电话亲自确认。",
+    "fil": "Napakagaling! Kapag tungkol sa pera, tiyaking tumawag para kumpirmahin."
+  },
+  "오디오 가이드": {
+    "vi": "Hướng dẫn bằng âm thanh",
+    "zh": "语音导览",
+    "fil": "Gabay na audio"
+  },
+  "버튼을 누르면 휴대폰이 소리 내어 읽어 줘요": {
+    "vi": "Bấm nút, điện thoại sẽ đọc to cho bạn nghe",
+    "zh": "按下按钮，手机会大声读给您听",
+    "fil": "Pindutin ang button at babasahin ito nang malakas ng cellphone"
+  },
+  "마음이 많이 아프시겠어요": {
+    "vi": "Chắc anh/chị đau lòng lắm",
+    "zh": "您一定很难过吧",
+    "fil": "Tiyak na labis ang sakit ng inyong kalooban"
+  },
+  "장례식장에서 상주에게 위로할 때": {
+    "vi": "Khi an ủi tang chủ ở nhà tang lễ",
+    "zh": "在殡仪馆安慰丧主时",
+    "fil": "Kapag nakikiramay sa pangunahing kapamilya sa lamay"
+  },
+  "듣기": {
+    "vi": "Nghe",
+    "zh": "收听",
+    "fil": "Pakinggan"
+  },
+  "멈추기": {
+    "vi": "Dừng",
+    "zh": "停止",
+    "fil": "Ihinto"
+  },
+  "🐢 천천히": {
+    "vi": "🐢 Chậm",
+    "zh": "🐢 慢速",
+    "fil": "🐢 Mabagal"
+  },
+  "보통 빠르기": {
+    "vi": "Tốc độ bình thường",
+    "zh": "正常速度",
+    "fil": "Karaniwang bilis"
+  },
+  "소리가 안 들리면 휴대폰 소리 크기와 무음 모드를 확인해 주세요.": {
+    "vi": "Nếu không nghe thấy, hãy kiểm tra âm lượng và chế độ im lặng của điện thoại.",
+    "zh": "如果听不到声音，请检查手机音量和静音模式。",
+    "fil": "Kung walang tunog, tingnan ang volume at silent mode ng cellphone."
+  },
+  "이 휴대폰에 한국어 음성이 없어요. 휴대폰 설정 → ‘텍스트 음성 변환(TTS)’에서 한국어를 내려받아 주세요.": {
+    "vi": "Điện thoại này chưa có giọng đọc tiếng Hàn. Vào Cài đặt → 'Chuyển văn bản thành giọng nói (TTS)' để tải tiếng Hàn.",
+    "zh": "这部手机没有韩语语音。请在设置 →“文字转语音（TTS）”中下载韩语。",
+    "fil": "Walang Korean na boses ang cellphone na ito. Pumunta sa Settings → 'Text-to-speech (TTS)' at i-download ang Korean."
+  },
+  "보여 주는 카드": {
+    "vi": "Thẻ đưa cho người khác xem",
+    "zh": "出示卡片",
+    "fil": "Card na ipapakita"
+  },
+  "조문 순서": {
+    "vi": "Trình tự viếng tang",
+    "zh": "吊唁顺序",
+    "fil": "Pagkakasunod-sunod ng pakikiramay"
+  },
+  "내 상황을 고르면 상대에게 보여 줄 문장이 크게 나타나요": {
+    "vi": "Chọn tình huống của bạn, câu để đưa cho người khác xem sẽ hiện chữ to",
+    "zh": "选择您的情况后，会用大字显示给对方看的句子",
+    "fil": "Piliin ang iyong sitwasyon at lalabas nang malaki ang pangungusap na ipapakita mo"
+  },
+  "아래에서 내 상황을 골라 주세요": {
+    "vi": "Hãy chọn tình huống của bạn ở bên dưới",
+    "zh": "请在下方选择您的情况",
+    "fil": "Piliin ang iyong sitwasyon sa ibaba"
+  },
+  "📱 화면 가득 크게 보여 주기": {
+    "vi": "📱 Hiển thị to toàn màn hình",
+    "zh": "📱 全屏放大显示",
+    "fil": "📱 Ipakita nang malaki sa buong screen"
+  },
+  "내 상황 고르기 (여러 개 골라도 돼요)": {
+    "vi": "Chọn tình huống của bạn (có thể chọn nhiều)",
+    "zh": "选择我的情况（可多选）",
+    "fil": "Piliin ang iyong sitwasyon (puwedeng marami)"
+  },
+  "종교적 이유": {
+    "vi": "Lý do tôn giáo",
+    "zh": "宗教原因",
+    "fil": "Dahil sa relihiyon"
+  },
+  "제 종교 때문에 절 대신 묵념하겠습니다.": {
+    "vi": "Vì tôn giáo của tôi, tôi xin mặc niệm thay cho việc lạy.",
+    "zh": "因为我的宗教信仰，我以默哀代替跪拜。",
+    "fil": "Dahil sa aking relihiyon, tahimik na pananalangin po ang gagawin ko sa halip na yumukod."
+  },
+  "무릎 통증": {
+    "vi": "Đau đầu gối",
+    "zh": "膝盖疼痛",
+    "fil": "Pananakit ng tuhod"
+  },
+  "무릎이 아파서 절 대신 고개 숙여 인사드리겠습니다.": {
+    "vi": "Vì đau đầu gối, tôi xin cúi đầu chào thay cho việc lạy.",
+    "zh": "我膝盖疼，以鞠躬代替跪拜。",
+    "fil": "Masakit po ang tuhod ko, kaya yuyuko na lang po ako sa halip na lumuhod."
+  },
+  "허리 통증": {
+    "vi": "Đau lưng",
+    "zh": "腰痛",
+    "fil": "Pananakit ng likod"
+  },
+  "허리가 아파서 서서 인사드리겠습니다.": {
+    "vi": "Vì đau lưng, tôi xin đứng chào.",
+    "zh": "我腰疼，就站着致意了。",
+    "fil": "Masakit po ang likod ko, kaya nakatayo na lang po akong babati."
+  },
+  "귀가 잘 안 들림": {
+    "vi": "Nghe không rõ",
+    "zh": "听力不好",
+    "fil": "Mahina ang pandinig"
+  },
+  "귀가 잘 안 들립니다. 천천히 크게 말씀해 주세요.": {
+    "vi": "Tôi nghe không rõ. Xin hãy nói chậm và to.",
+    "zh": "我听力不太好，请慢一点、大声一点说。",
+    "fil": "Mahina po ang pandinig ko. Pakisalita po nang dahan-dahan at malakas."
+  },
+  "한국어가 서툼": {
+    "vi": "Chưa giỏi tiếng Hàn",
+    "zh": "韩语不熟练",
+    "fil": "Hindi pa bihasa sa Korean"
+  },
+  "한국어가 서툽니다. 천천히 말씀해 주세요.": {
+    "vi": "Tôi chưa giỏi tiếng Hàn. Xin hãy nói chậm.",
+    "zh": "我的韩语不太好，请说慢一点。",
+    "fil": "Hindi pa po ako bihasa sa Korean. Pakisalita po nang dahan-dahan."
+  },
+  "장례식장 조문 순서": {
+    "vi": "Trình tự viếng tang ở nhà tang lễ",
+    "zh": "殡仪馆吊唁顺序",
+    "fil": "Pagkakasunod-sunod ng pakikiramay sa lamay"
+  },
+  "옆으로 넘기며 차례대로 봐요": {
+    "vi": "Vuốt sang ngang để xem lần lượt",
+    "zh": "左右滑动，按顺序查看",
+    "fil": "I-swipe pakanan para makita isa-isa"
+  },
+  "방명록 쓰기": {
+    "vi": "Ghi sổ tang",
+    "zh": "签吊唁簿",
+    "fil": "Pagsulat sa guestbook"
+  },
+  "입구에서 방명록에 이름을 써요.": {
+    "vi": "Ghi tên vào sổ tang ở lối vào.",
+    "zh": "在入口处的吊唁簿上写下名字。",
+    "fil": "Isulat ang pangalan mo sa guestbook sa pasukan."
+  },
+  "외투는 미리 벗어 두어요.": {
+    "vi": "Cởi áo khoác ra trước.",
+    "zh": "提前脱下外套。",
+    "fil": "Hubarin muna ang jacket o coat."
+  },
+  "향 또는 꽃 올리기": {
+    "vi": "Thắp hương hoặc dâng hoa",
+    "zh": "上香或献花",
+    "fil": "Pag-aalay ng insenso o bulaklak"
+  },
+  "향에 불을 붙이고 손으로 흔들어 꺼요. 꽃을 놓아도 돼요.": {
+    "vi": "Châm hương rồi phẩy tay cho tắt lửa. Cũng có thể đặt hoa.",
+    "zh": "点燃香后用手扇灭火苗。也可以献花。",
+    "fil": "Sindihan ang insenso at patayin ang apoy sa pagkumpas ng kamay. Puwede ring mag-alay ng bulaklak."
+  },
+  "입으로 불어서 끄지 않아요.": {
+    "vi": "Không thổi tắt bằng miệng.",
+    "zh": "不要用嘴吹灭。",
+    "fil": "Huwag hipan para patayin."
+  },
+  "영정에 절하기": {
+    "vi": "Lạy trước di ảnh",
+    "zh": "向遗像行礼",
+    "fil": "Pagyukod sa larawan ng yumao"
+  },
+  "영정 앞에서 두 번 절해요.": {
+    "vi": "Lạy hai lạy trước di ảnh.",
+    "zh": "在遗像前跪拜两次。",
+    "fil": "Yumukod nang dalawang beses sa harap ng larawan ng yumao."
+  },
+  "종교에 따라 고개 숙여 기도해도 돼요.": {
+    "vi": "Tùy tôn giáo, có thể cúi đầu cầu nguyện.",
+    "zh": "根据宗教信仰，也可以低头祈祷。",
+    "fil": "Depende sa relihiyon, puwede ring yumuko at manalangin."
+  },
+  "상주와 인사하기": {
+    "vi": "Chào tang chủ",
+    "zh": "向丧主致意",
+    "fil": "Pagbati sa pangunahing kapamilya"
+  },
+  "상주와 마주 보고 한 번 절해요.": {
+    "vi": "Đối diện tang chủ và lạy một lạy.",
+    "zh": "与丧主面对面行一次礼。",
+    "fil": "Humarap sa pangunahing kapamilya at yumukod nang isang beses."
+  },
+  "고개를 깊이 숙여 인사해도 돼요.": {
+    "vi": "Cũng có thể cúi đầu thật sâu để chào.",
+    "zh": "也可以深深鞠躬致意。",
+    "fil": "Puwede ring yumuko nang malalim bilang pagbati."
+  },
+  "위로의 말": {
+    "vi": "Lời an ủi",
+    "zh": "安慰的话",
+    "fil": "Mga salitang pakikiramay"
+  },
+  "짧고 조용하게 위로해요.": {
+    "vi": "An ủi ngắn gọn và nhẹ nhàng.",
+    "zh": "简短、安静地安慰。",
+    "fil": "Makiramay nang maikli at tahimik."
+  },
+  "말없이 고개 숙여도 마음이 전해져요.": {
+    "vi": "Dù chỉ lặng lẽ cúi đầu, tấm lòng vẫn được truyền tải.",
+    "zh": "即使不说话，只是低头，心意也能传达。",
+    "fil": "Kahit yumuko ka lang nang tahimik, mararamdaman nila ang iyong malasakit."
+  },
+  "부의금 내기": {
+    "vi": "Gửi tiền phúng viếng",
+    "zh": "送奠仪（慰问金）",
+    "fil": "Pagbibigay ng abuloy"
+  },
+  "부의금 봉투를 부의함에 넣어요.": {
+    "vi": "Bỏ phong bì tiền phúng viếng vào hộp phúng viếng.",
+    "zh": "把奠仪信封放进奠仪箱。",
+    "fil": "Ilagay ang sobre ng abuloy sa kahon ng abuloy."
+  },
+  "봉투 뒤에 내 이름을 써요.": {
+    "vi": "Ghi tên mình ở mặt sau phong bì.",
+    "zh": "在信封背面写上自己的名字。",
+    "fil": "Isulat ang pangalan mo sa likod ng sobre."
+  },
+  "조용히 나오기": {
+    "vi": "Lặng lẽ ra về",
+    "zh": "安静地离开",
+    "fil": "Tahimik na pag-alis"
+  },
+  "두세 걸음 뒤로 물러나서 나와요.": {
+    "vi": "Lùi lại hai ba bước rồi ra về.",
+    "zh": "后退两三步再离开。",
+    "fil": "Umatras nang dalawa o tatlong hakbang bago lumabas."
+  },
+  "식사를 권하면 잠깐 먹고 가도 돼요.": {
+    "vi": "Nếu được mời ăn, có thể ăn một chút rồi về.",
+    "zh": "如果对方请您吃饭，可以稍微吃一点再走。",
+    "fil": "Kung alukin kang kumain, puwede kang kumain sandali bago umalis."
+  },
+  "⚡ 스피드 OX": {
+    "vi": "⚡ Đúng/Sai tốc độ",
+    "zh": "⚡ 快速判断对错",
+    "fil": "⚡ Mabilisang Tama o Mali"
+  },
+  "✉️ 봉투 붙이기": {
+    "vi": "✉️ Dán nhãn phong bì",
+    "zh": "✉️ 贴信封标签",
+    "fil": "✉️ Pagdikit sa sobre"
+  },
+  "스피드 OX 퀴즈": {
+    "vi": "Câu đố Đúng/Sai tốc độ",
+    "zh": "快速对错测验",
+    "fil": "Mabilisang pagsusulit na Tama o Mali"
+  },
+  "문제마다 10초 안에 O 또는 X를 눌러요.": {
+    "vi": "Mỗi câu, bấm O hoặc X trong vòng 10 giây.",
+    "zh": "每道题请在 10 秒内按 O 或 X。",
+    "fil": "Sa bawat tanong, pindutin ang O o X sa loob ng 10 segundo."
+  },
+  "맞히면 1점! 틀리거나 시간이 지나면 설명을 보여 줘요.": {
+    "vi": "Đúng được 1 điểm! Sai hoặc hết giờ sẽ có giải thích.",
+    "zh": "答对得 1 分！答错或超时会显示解释。",
+    "fil": "1 puntos kapag tama! Kapag mali o naubos ang oras, may paliwanag."
+  },
+  "앗! 시간이 다 됐어요!": {
+    "vi": "Ôi! Hết giờ rồi!",
+    "zh": "哎呀！时间到了！",
+    "fil": "Naku! Ubos na ang oras!"
+  },
+  "알겠어요! 다음 문제 →": {
+    "vi": "Hiểu rồi! Câu tiếp theo →",
+    "zh": "知道了！下一题 →",
+    "fil": "Naintindihan ko! Susunod na tanong →"
+  },
+  "완벽해요! OX 박사님이에요.": {
+    "vi": "Hoàn hảo! Bạn là tiến sĩ Đúng/Sai.",
+    "zh": "太完美了！您是对错博士。",
+    "fil": "Perpekto! Eksperto ka sa Tama o Mali."
+  },
+  "아주 잘했어요!": {
+    "vi": "Rất giỏi!",
+    "zh": "做得非常好！",
+    "fil": "Napakagaling!"
+  },
+  "괜찮아요. 한 번 더 하면 더 잘할 거예요.": {
+    "vi": "Không sao. Làm thêm lần nữa sẽ tốt hơn.",
+    "zh": "没关系，再做一次会更好。",
+    "fil": "Okay lang. Mas gagaling ka sa susunod na subok."
+  },
+  "향불은 입으로 후~ 불어서 꺼요.": {
+    "vi": "Thổi 'phù~' bằng miệng để tắt hương.",
+    "zh": "用嘴“呼~”地吹灭香火。",
+    "fil": "Hinihipan ang insenso para mamatay ang apoy."
+  },
+  "앗! 향은 입으로 불면 안 돼요!": {
+    "vi": "Ôi! Không được thổi hương bằng miệng!",
+    "zh": "哎呀！不能用嘴吹香哦！",
+    "fil": "Naku! Hindi dapat hipan ang insenso!"
+  },
+  "손으로 살살 흔들어서 꺼요.": {
+    "vi": "Phẩy tay nhẹ nhàng để tắt.",
+    "zh": "用手轻轻扇灭。",
+    "fil": "Dahan-dahang ikumpas ang kamay para patayin."
+  },
+  "영정 앞에서는 두 번 절해요.": {
+    "vi": "Trước di ảnh thì lạy hai lạy.",
+    "zh": "在遗像前要跪拜两次。",
+    "fil": "Sa harap ng larawan ng yumao, yumukod nang dalawang beses."
+  },
+  "앗! 영정 앞에서는 두 번 절해요!": {
+    "vi": "Ôi! Trước di ảnh thì lạy hai lạy đấy!",
+    "zh": "哎呀！在遗像前要跪拜两次！",
+    "fil": "Naku! Dalawang beses yumukod sa harap ng larawan ng yumao!"
+  },
+  "종교에 따라 묵념이나 기도로 대신해도 돼요.": {
+    "vi": "Tùy tôn giáo, có thể mặc niệm hoặc cầu nguyện thay thế.",
+    "zh": "根据宗教信仰，也可以用默哀或祈祷代替。",
+    "fil": "Depende sa relihiyon, puwedeng tahimik na pananalangin o dasal na lang."
+  },
+  "상주와는 마주 보고 한 번 절해요.": {
+    "vi": "Với tang chủ thì đối diện và lạy một lạy.",
+    "zh": "与丧主面对面行一次礼。",
+    "fil": "Sa pangunahing kapamilya, humarap at yumukod nang isang beses."
+  },
+  "앗! 상주와는 한 번 맞절해요!": {
+    "vi": "Ôi! Với tang chủ thì lạy đáp một lạy!",
+    "zh": "哎呀！和丧主要互相行一次礼！",
+    "fil": "Naku! Isang beses kayong magkaharap na yuyukod ng pangunahing kapamilya!"
+  },
+  "깊이 고개 숙여 인사해도 괜찮아요.": {
+    "vi": "Cúi đầu thật sâu để chào cũng được.",
+    "zh": "深深鞠躬致意也可以。",
+    "fil": "Ayos lang ding yumuko nang malalim bilang pagbati."
+  },
+  "조문 갈 때는 밝은 색 옷이 좋아요.": {
+    "vi": "Đi viếng tang nên mặc quần áo màu sáng.",
+    "zh": "去吊唁时穿亮色衣服比较好。",
+    "fil": "Mas mabuting magsuot ng matingkad na kulay kapag nakikiramay."
+  },
+  "앗! 장례식장엔 어두운 옷을 입어요!": {
+    "vi": "Ôi! Đến đám tang phải mặc đồ tối màu!",
+    "zh": "哎呀！去丧礼要穿深色衣服！",
+    "fil": "Naku! Madilim na kulay ang isinusuot sa lamay!"
+  },
+  "검은색, 남색, 회색처럼 차분한 색이 좋아요.": {
+    "vi": "Nên mặc màu trang nhã như đen, xanh đậm, xám.",
+    "zh": "黑色、藏青色、灰色等素雅的颜色比较好。",
+    "fil": "Mas mainam ang mahinahong kulay tulad ng itim, navy blue, at abo."
+  },
+  "결혼식 봉투에는 '부의'라고 써요.": {
+    "vi": "Trên phong bì mừng cưới ghi chữ '부의 (phúng viếng)'.",
+    "zh": "婚礼信封上写“奠仪”。",
+    "fil": "Isinusulat ang '부의' (abuloy sa patay) sa sobre para sa kasal."
+  },
+  "앗! 결혼식 봉투엔 '축결혼'이에요!": {
+    "vi": "Ôi! Phong bì mừng cưới phải ghi '축결혼 (chúc mừng đám cưới)'!",
+    "zh": "哎呀！婚礼信封上要写“祝结婚”！",
+    "fil": "Naku! '축결혼' (binabati sa kasal) ang isinusulat sa sobre para sa kasal!"
+  },
+  "'부의'는 장례식 봉투에 써요.": {
+    "vi": "'부의 (phúng viếng)' thì ghi trên phong bì đám tang.",
+    "zh": "“奠仪”是写在丧礼信封上的。",
+    "fil": "Ang '부의' ay isinusulat sa sobre para sa lamay."
+  },
+  "부의금 봉투 뒤에는 내 이름을 써요.": {
+    "vi": "Mặt sau phong bì phúng viếng ghi tên mình.",
+    "zh": "奠仪信封背面要写自己的名字。",
+    "fil": "Isinusulat ang pangalan mo sa likod ng sobre ng abuloy."
+  },
+  "앗! 봉투 뒤에 이름을 꼭 써요!": {
+    "vi": "Ôi! Nhất định phải ghi tên ở mặt sau phong bì!",
+    "zh": "哎呀！信封背面一定要写名字！",
+    "fil": "Naku! Siguraduhing isulat ang pangalan sa likod ng sobre!"
+  },
+  "이름이 있어야 누가 왔는지 상주가 알 수 있어요.": {
+    "vi": "Có tên thì tang chủ mới biết ai đã đến.",
+    "zh": "写了名字，丧主才知道是谁来了。",
+    "fil": "Kailangang may pangalan para malaman ng pamilya kung sino ang dumalaw."
+  },
+  "종교 때문에 절이 어려우면 묵념해도 돼요.": {
+    "vi": "Nếu vì tôn giáo mà khó lạy thì có thể mặc niệm.",
+    "zh": "如果因宗教原因不便跪拜，可以默哀。",
+    "fil": "Kung hindi ka makayuko dahil sa relihiyon, puwede kang tahimik na manalangin."
+  },
+  "앗! 묵념으로 대신해도 괜찮아요!": {
+    "vi": "Ôi! Mặc niệm thay thế cũng được mà!",
+    "zh": "哎呀！用默哀代替也没关系哦！",
+    "fil": "Naku! Ayos lang ang tahimik na pananalangin bilang kapalit!"
+  },
+  "마음을 담아 고개를 숙이면 충분해요.": {
+    "vi": "Chỉ cần cúi đầu với tấm lòng thành là đủ.",
+    "zh": "诚心诚意地低头就足够了。",
+    "fil": "Sapat na ang taos-pusong pagyuko."
+  },
+  "모르는 번호로 온 문자 속 링크는 바로 눌러 봐요.": {
+    "vi": "Bấm ngay vào link trong tin nhắn từ số lạ.",
+    "zh": "陌生号码发来的短信链接，马上点开看看。",
+    "fil": "Pindutin agad ang link sa text mula sa hindi kilalang numero."
+  },
+  "앗! 모르는 링크는 누르면 안 돼요!": {
+    "vi": "Ôi! Không được bấm vào link lạ!",
+    "zh": "哎呀！陌生链接不能点！",
+    "fil": "Naku! Hindi dapat pindutin ang hindi kilalang link!"
+  },
+  "휴대폰 정보가 빠져나갈 수 있어요. 바로 지워요.": {
+    "vi": "Thông tin điện thoại có thể bị đánh cắp. Hãy xóa ngay.",
+    "zh": "手机信息可能会被盗，请马上删除。",
+    "fil": "Maaaring manakaw ang impormasyon sa cellphone. Burahin agad."
+  },
+  "자녀가 문자로 급히 돈을 달라고 하면 먼저 전화로 확인해요.": {
+    "vi": "Nếu con nhắn tin xin tiền gấp, hãy gọi điện xác nhận trước.",
+    "zh": "如果子女发短信急着要钱，先打电话确认。",
+    "fil": "Kung humingi ng pera nang madalian ang anak mo sa text, tumawag muna para kumpirmahin."
+  },
+  "앗! 꼭 전화로 먼저 확인해요!": {
+    "vi": "Ôi! Nhất định phải gọi điện xác nhận trước!",
+    "zh": "哎呀！一定要先打电话确认！",
+    "fil": "Naku! Siguraduhing tumawag muna para kumpirmahin!"
+  },
+  "자녀인 척하는 문자 사기가 많아요.": {
+    "vi": "Có nhiều vụ lừa đảo qua tin nhắn giả làm con cái.",
+    "zh": "冒充子女的短信诈骗很多。",
+    "fil": "Maraming text scam na nagpapanggap na anak."
+  },
+  "AI가 알려 준 정보는 무조건 다 맞아요.": {
+    "vi": "Thông tin AI cung cấp lúc nào cũng đúng hết.",
+    "zh": "AI 告诉的信息全部都是对的。",
+    "fil": "Laging tama ang lahat ng impormasyong ibinibigay ng AI."
+  },
+  "앗! AI도 틀릴 때가 있어요!": {
+    "vi": "Ôi! AI cũng có lúc sai đấy!",
+    "zh": "哎呀！AI 也有出错的时候！",
+    "fil": "Naku! Nagkakamali rin ang AI minsan!"
+  },
+  "중요한 내용은 다른 곳에서 한 번 더 확인해요.": {
+    "vi": "Nội dung quan trọng hãy kiểm tra lại ở nguồn khác.",
+    "zh": "重要的内容要在别处再确认一次。",
+    "fil": "Suriing muli sa ibang mapagkukunan ang mahahalagang impormasyon."
+  },
+  "봉투 이름표 붙이기": {
+    "vi": "Dán nhãn lên phong bì",
+    "zh": "给信封贴标签",
+    "fil": "Pagdikit ng label sa sobre"
+  },
+  "아래 스티커를 끌어서 알맞은 봉투에 붙여 보세요": {
+    "vi": "Kéo nhãn dán bên dưới và dán vào phong bì phù hợp",
+    "zh": "把下面的贴纸拖到合适的信封上",
+    "fil": "I-drag ang sticker sa ibaba at idikit sa tamang sobre"
+  },
+  "결혼식": {
+    "vi": "Đám cưới",
+    "zh": "婚礼",
+    "fil": "Kasal"
+  },
+  "장례식": {
+    "vi": "Đám tang",
+    "zh": "丧礼",
+    "fil": "Lamay / libing"
+  },
+  "축결혼": {
+    "vi": "Chúc mừng đám cưới (chữ ghi trên phong bì mừng cưới)",
+    "zh": "祝结婚（写在婚礼红包上的字）",
+    "fil": "Binabati sa kasal (isinusulat sa sobre ng regalo sa kasal)"
+  },
+  "부의": {
+    "vi": "Phúng viếng (chữ ghi trên phong bì đám tang)",
+    "zh": "奠仪（写在丧礼信封上的字）",
+    "fil": "Abuloy sa patay (isinusulat sa sobre para sa lamay)"
+  },
+  "여기에 붙여요": {
+    "vi": "Dán vào đây",
+    "zh": "贴在这里",
+    "fil": "Idikit dito"
+  },
+  "'축결혼'은 결혼을 축하하는 말이에요. 결혼식 봉투에 붙여요.": {
+    "vi": "'축결혼' là lời chúc mừng đám cưới. Hãy dán lên phong bì đám cưới.",
+    "zh": "“祝结婚”是祝贺结婚的话，请贴在婚礼信封上。",
+    "fil": "Ang '축결혼' ay pagbati sa kasal. Idikit ito sa sobre para sa kasal."
+  },
+  "맞아요! '축결혼'은 결혼식 봉투에 써요.": {
+    "vi": "Đúng rồi! '축결혼' ghi trên phong bì đám cưới.",
+    "zh": "对了！“祝结婚”写在婚礼信封上。",
+    "fil": "Tama! Ang '축결혼' ay isinusulat sa sobre para sa kasal."
+  },
+  "'부의'는 돌아가신 분께 드리는 돈이라는 뜻이에요. 장례식 봉투에 붙여요.": {
+    "vi": "'부의' nghĩa là tiền viếng người đã khuất. Hãy dán lên phong bì đám tang.",
+    "zh": "“奠仪”是献给逝者的钱的意思，请贴在丧礼信封上。",
+    "fil": "Ang '부의' ay perang iniaalay para sa yumao. Idikit ito sa sobre para sa lamay."
+  },
+  "맞아요! '부의'는 장례식 봉투에 써요.": {
+    "vi": "Đúng rồi! '부의' ghi trên phong bì đám tang.",
+    "zh": "对了！“奠仪”写在丧礼信封上。",
+    "fil": "Tama! Ang '부의' ay isinusulat sa sobre para sa lamay."
+  },
+  "모두 맞혔어요! 🎉": {
+    "vi": "Đúng hết rồi! 🎉",
+    "zh": "全部答对了！🎉",
+    "fil": "Tama lahat! 🎉"
+  },
+  "축결혼(祝結婚): 결혼을 축하해요. 결혼식 축의금 봉투에 써요.": {
+    "vi": "축결혼 (祝結婚): chúc mừng đám cưới. Ghi trên phong bì tiền mừng cưới.",
+    "zh": "祝结婚：祝贺结婚。写在婚礼礼金信封上。",
+    "fil": "축결혼 (祝結婚): pagbati sa kasal. Isinusulat sa sobre ng regalong pera sa kasal."
+  },
+  "부의(賻儀): 슬픔을 함께 나눠요. 장례식 부의금 봉투에 써요.": {
+    "vi": "부의 (賻儀): cùng chia sẻ nỗi buồn. Ghi trên phong bì tiền phúng viếng.",
+    "zh": "奠仪（賻儀）：分担悲伤。写在丧礼奠仪信封上。",
+    "fil": "부의 (賻儀): pakikiisa sa pighati. Isinusulat sa sobre ng abuloy sa lamay."
+  },
+  "네온 스탬프판": {
+    "vi": "Bảng tem neon",
+    "zh": "霓虹印章册",
+    "fil": "Neon stamp board"
+  },
+  "퀴즈와 상황극을 마치면 스탬프를 받아요": {
+    "vi": "Hoàn thành câu đố và đóng vai tình huống để nhận tem",
+    "zh": "完成测验和情景剧就能获得印章",
+    "fil": "Makakakuha ka ng stamp kapag natapos mo ang pagsusulit at role-play"
+  },
+  "상황극 완주": {
+    "vi": "Hoàn thành đóng vai",
+    "zh": "完成情景剧",
+    "fil": "Natapos ang role-play"
+  },
+  "상황극 5문제를 끝까지 풀어요": {
+    "vi": "Làm hết 5 câu đóng vai tình huống",
+    "zh": "把 5 道情景剧题目做完",
+    "fil": "Tapusin ang 5 tanong sa role-play"
+  },
+  "상황극 만점": {
+    "vi": "Điểm tuyệt đối đóng vai",
+    "zh": "情景剧满分",
+    "fil": "Perpektong iskor sa role-play"
+  },
+  "상황극 5문제를 모두 맞혀요": {
+    "vi": "Trả lời đúng cả 5 câu đóng vai",
+    "zh": "5 道情景剧题目全部答对",
+    "fil": "Tamang sagot sa lahat ng 5 tanong sa role-play"
+  },
+  "OX 퀴즈 완주": {
+    "vi": "Hoàn thành câu đố Đúng/Sai",
+    "zh": "完成对错测验",
+    "fil": "Natapos ang Tama o Mali"
+  },
+  "스피드 OX 10문제를 끝까지 풀어요": {
+    "vi": "Làm hết 10 câu Đúng/Sai tốc độ",
+    "zh": "把 10 道快速对错题做完",
+    "fil": "Tapusin ang 10 tanong sa mabilisang Tama o Mali"
+  },
+  "OX 만점": {
+    "vi": "Điểm tuyệt đối Đúng/Sai",
+    "zh": "对错测验满分",
+    "fil": "Perpektong iskor sa Tama o Mali"
+  },
+  "스피드 OX 10문제를 모두 맞혀요": {
+    "vi": "Trả lời đúng cả 10 câu Đúng/Sai tốc độ",
+    "zh": "10 道快速对错题全部答对",
+    "fil": "Tamang sagot sa lahat ng 10 tanong sa mabilisang Tama o Mali"
+  },
+  "봉투 박사": {
+    "vi": "Chuyên gia phong bì",
+    "zh": "信封博士",
+    "fil": "Eksperto sa sobre"
+  },
+  "봉투 이름표를 모두 붙여요": {
+    "vi": "Dán hết nhãn lên phong bì",
+    "zh": "把信封标签全部贴好",
+    "fil": "Idikit ang lahat ng label sa sobre"
+  },
+  "한 번에 성공": {
+    "vi": "Thành công ngay lần đầu",
+    "zh": "一次成功",
+    "fil": "Tagumpay sa unang subok"
+  },
+  "봉투 이름표를 한 번도 틀리지 않고 붙여요": {
+    "vi": "Dán nhãn phong bì mà không sai lần nào",
+    "zh": "一次都不出错地贴好信封标签",
+    "fil": "Idikit ang mga label sa sobre nang walang kahit isang mali"
+  },
+  "모은 스탬프 {n} / {total}": {
+    "vi": "Tem đã sưu tập: {n} / {total}",
+    "zh": "已收集印章：{n} / {total}",
+    "fil": "Naipong stamp: {n} / {total}"
+  },
+  "스탬프판 보기": {
+    "vi": "Xem bảng tem",
+    "zh": "查看印章册",
+    "fil": "Tingnan ang stamp board"
+  },
+  "확인": {
+    "vi": "Đồng ý",
+    "zh": "确定",
+    "fil": "OK"
+  },
+  "취소": {
+    "vi": "Hủy",
+    "zh": "取消",
+    "fil": "Kanselahin"
+  },
+  "모두 지우기": {
+    "vi": "Xóa hết",
+    "zh": "全部删除",
+    "fil": "Burahin lahat"
+  },
+  "스탬프 처음부터 다시 모으기": {
+    "vi": "Sưu tập lại tem từ đầu",
+    "zh": "从头重新收集印章",
+    "fil": "Mag-ipon muli ng stamp mula sa simula"
+  },
+  "네온 스탬프 획득!": {
+    "vi": "Nhận được tem neon!",
+    "zh": "获得霓虹印章！",
+    "fil": "Nakakuha ka ng neon stamp!"
+  },
+  "스탬프를 모두 지울까요? 되돌릴 수 없어요.": {
+    "vi": "Xóa hết tem nhé? Không thể khôi phục lại.",
+    "zh": "要删除全部印章吗？删除后无法恢复。",
+    "fil": "Buburahin ba ang lahat ng stamp? Hindi na ito maibabalik."
+  },
+  "스탬프를 모두 모았어요!": {
+    "vi": "Bạn đã sưu tập đủ tất cả tem!",
+    "zh": "印章全部集齐了！",
+    "fil": "Naipon mo na ang lahat ng stamp!"
+  },
+  "정말 대단해요! 생활 예절 박사님이에요.": {
+    "vi": "Thật tuyệt vời! Bạn là chuyên gia phép lịch sự trong cuộc sống.",
+    "zh": "太厉害了！您是生活礼仪博士。",
+    "fil": "Napakahusay! Eksperto ka na sa magandang asal sa araw-araw."
+  }
+}

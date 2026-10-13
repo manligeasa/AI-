@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "톡톡예절",
+    "slug": "toktok-yejeol",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A0A12",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.manligeasa.toktokyejeol"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A12",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.manligeasa.toktokyejeol"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#0A0A12"
+        }
+      ]
+    ]
+  }
+}

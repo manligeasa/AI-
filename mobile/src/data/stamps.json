@@ -1,0 +1,12 @@
+{
+  "title": "네온 스탬프판",
+  "subtitle": "퀴즈와 상황극을 마치면 스탬프를 받아요",
+  "stamps": [
+    { "id": "roleplay", "title": "상황극 완주", "emoji": "🎭", "color": "pink", "how": "상황극 5문제를 끝까지 풀어요" },
+    { "id": "roleplay_perfect", "title": "상황극 만점", "emoji": "👑", "color": "purple", "how": "상황극 5문제를 모두 맞혀요" },
+    { "id": "ox", "title": "OX 퀴즈 완주", "emoji": "⚡", "color": "lime", "how": "스피드 OX 10문제를 끝까지 풀어요" },
+    { "id": "ox_perfect", "title": "OX 만점", "emoji": "🏆", "color": "blue", "how": "스피드 OX 10문제를 모두 맞혀요" },
+    { "id": "envelope", "title": "봉투 박사", "emoji": "✉️", "color": "pink", "how": "봉투 이름표를 모두 붙여요" },
+    { "id": "envelope_perfect", "title": "한 번에 성공", "emoji": "🎯", "color": "lime", "how": "봉투 이름표를 한 번도 틀리지 않고 붙여요" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "history": [],
+  "settings": {
+    "showTips": true
+  },
+  "rolePlay": {
+    "bestScore": 0
+  },
+  "quiz": {
+    "oxBest": 0
+  }
+}

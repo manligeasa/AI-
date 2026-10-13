@@ -1,0 +1,11 @@
+{
+  "title": "보여 주는 카드",
+  "subtitle": "내 상황을 고르면 상대에게 보여 줄 문장이 크게 나타나요",
+  "situations": [
+    { "id": "religion", "label": "종교적 이유", "emoji": "🙏", "message": "제 종교 때문에 절 대신 묵념하겠습니다." },
+    { "id": "knee", "label": "무릎 통증", "emoji": "🦵", "message": "무릎이 아파서 절 대신 고개 숙여 인사드리겠습니다." },
+    { "id": "back", "label": "허리 통증", "emoji": "🧍", "message": "허리가 아파서 서서 인사드리겠습니다." },
+    { "id": "hearing", "label": "귀가 잘 안 들림", "emoji": "👂", "message": "귀가 잘 안 들립니다. 천천히 크게 말씀해 주세요." },
+    { "id": "korean", "label": "한국어가 서툼", "emoji": "💬", "message": "한국어가 서툽니다. 천천히 말씀해 주세요." }
+  ]
+}

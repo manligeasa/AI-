@@ -1,0 +1,70 @@
+{
+  "title": "생활 속 상황극",
+  "scenarios": [
+    {
+      "id": "funeral",
+      "place": "장례식장",
+      "emoji": "🕯️",
+      "situation": "절을 마쳤어요. 상주가 인사해요.",
+      "speaker": "상주",
+      "line": "와 주셔서 감사합니다.",
+      "choices": [
+        { "text": "오랜만이에요! 잘 지냈어요?", "correct": false, "feedback": "반가워도 장례식장에서는 밝은 인사를 하지 않아요." },
+        { "text": "얼마나 상심이 크세요.", "correct": true, "feedback": "좋아요! 짧고 조용한 위로가 가장 좋아요." },
+        { "text": "식사는 어디에서 해요?", "correct": false, "feedback": "먼저 위로의 말을 해요. 식사는 나중에 물어봐요." }
+      ]
+    },
+    {
+      "id": "hospital",
+      "place": "병원 접수처",
+      "emoji": "🏥",
+      "situation": "병원에 처음 왔어요. 간호사가 물어요.",
+      "speaker": "간호사",
+      "line": "어떻게 오셨어요?",
+      "choices": [
+        { "text": "버스 타고 왔어요.", "correct": false, "feedback": "여기서 '어떻게 오셨어요?'는 '왜 오셨어요?'라는 뜻이에요." },
+        { "text": "그냥 왔어요.", "correct": false, "feedback": "아픈 곳을 말해야 알맞은 진료를 받을 수 있어요." },
+        { "text": "무릎이 아파서 왔어요. 처음이에요.", "correct": true, "feedback": "정확해요! 아픈 곳과 처음 온 것을 함께 말했어요." }
+      ]
+    },
+    {
+      "id": "kiosk",
+      "place": "카페",
+      "emoji": "☕",
+      "situation": "키오스크(무인 주문기)로 주문하기가 어려워요.",
+      "speaker": "직원",
+      "line": "(바쁘게 커피를 만들고 있어요)",
+      "choices": [
+        { "text": "죄송한데, 주문 좀 도와주실 수 있어요?", "correct": true, "feedback": "훌륭해요! 정중하게 도움을 청하면 대부분 기꺼이 도와줘요." },
+        { "text": "이거 왜 이렇게 어려워요!", "correct": false, "feedback": "답답해도 화를 내면 서로 기분이 상해요." },
+        { "text": "(말없이 그냥 나간다)", "correct": false, "feedback": "도움을 청하는 것은 부끄러운 일이 아니에요." }
+      ]
+    },
+    {
+      "id": "wedding",
+      "place": "결혼식장",
+      "emoji": "💐",
+      "situation": "친구 아들의 결혼식이에요. 친구를 만났어요.",
+      "speaker": "친구",
+      "line": "바쁜데 와 줘서 고마워!",
+      "choices": [
+        { "text": "삼가 고인의 명복을 빕니다.", "correct": false, "feedback": "이 말은 장례식장에서 하는 말이에요." },
+        { "text": "축하해! 정말 기쁘겠다.", "correct": true, "feedback": "딱 맞아요! 기쁜 날에는 밝게 축하해요." },
+        { "text": "축의금은 얼마 내야 해?", "correct": false, "feedback": "돈 이야기는 그 자리에서 묻지 않는 게 좋아요." }
+      ]
+    },
+    {
+      "id": "scam",
+      "place": "휴대폰 문자",
+      "emoji": "📱",
+      "situation": "모르는 번호로 문자가 왔어요.",
+      "speaker": "문자",
+      "line": "엄마, 폰 고장 났어. 이 번호로 돈 좀 보내 줘.",
+      "choices": [
+        { "text": "얼마 필요해? 바로 보낼게.", "correct": false, "feedback": "자녀를 사칭하는 문자 사기일 수 있어요. 바로 보내면 안 돼요." },
+        { "text": "문자 속 링크를 눌러 본다.", "correct": false, "feedback": "모르는 링크는 누르지 않아요. 휴대폰 정보가 빠져나갈 수 있어요." },
+        { "text": "원래 번호로 전화해서 확인할게.", "correct": true, "feedback": "최고예요! 돈 이야기는 꼭 전화로 직접 확인해요." }
+      ]
+    }
+  ]
+}

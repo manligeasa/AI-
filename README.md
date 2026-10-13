@@ -15,6 +15,11 @@ npm run build    # 배포용 파일 만들기 (dist 폴더)
 npm run build:artifact  # HTML 파일 하나로 묶기 (dist-artifact 폴더, 공유 링크용)
 ```
 
+## 모바일 앱
+
+`mobile/` 폴더에 React Native + Expo 앱이 있다. 네온 다크 테마이고, 데이터는 휴대폰 안 JSON 파일에만 저장한다 (서버 비용 없음).
+자세한 내용: [mobile/README.md](mobile/README.md)
+
 ## 폴더 구조
 
 ```
